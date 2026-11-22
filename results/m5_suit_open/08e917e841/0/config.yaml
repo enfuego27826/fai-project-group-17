@@ -1,0 +1,44 @@
+experiment: m5_suit_open
+seed: 0
+backend: auto
+simultaneous: true
+solver:
+  enum_limit: 20000
+  tol: 1.0e-09
+  pricing_time_limit: 600
+  key_pure_enum_limit: 2000000
+games:
+- name: suit2x2
+  base_game: suit_blocker(suits=2,ranks=2)
+  team:
+  - 0
+  - 1
+  adversary: 2
+  rounds:
+  - 0
+  k:
+  - 2
+  s:
+  - 0
+  rho:
+  - pub
+  exact: true
+  time_limit: 900
+  phi: suit_blocker
+- name: suit4x2
+  base_game: suit_blocker(suits=4,ranks=2)
+  team:
+  - 0
+  - 1
+  adversary: 2
+  rounds:
+  - 0
+  k:
+  - 3
+  s:
+  - 1
+  rho:
+  - pub
+  exact: true
+  time_limit: 900
+  phi: suit_blocker

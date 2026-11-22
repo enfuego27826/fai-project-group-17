@@ -1,0 +1,106 @@
+experiment: m4_optim
+seeds:
+- 0
+- 1
+- 2
+- 3
+- 4
+workers: 8
+exact_values_from: configs/m3_marl.yaml
+methods:
+- name: baseline
+  trainer: pg
+  opponent: best_response
+  lr: 8.0
+  iterations: 10000
+  batch: 256
+  outputs:
+  - last
+  - avg
+- name: decay
+  trainer: pg
+  opponent: best_response
+  lr: 8.0
+  lr_decay: sqrt
+  iterations: 10000
+  batch: 256
+  outputs:
+  - last
+  - avg
+- name: entropy
+  trainer: pg
+  opponent: best_response
+  lr: 8.0
+  entropy: 0.05
+  iterations: 10000
+  batch: 256
+  outputs:
+  - last
+  - avg
+games:
+- name: attack2x2
+  base_game: coordinated_attack(rows=2,cols=2)
+  team:
+  - 0
+  - 1
+  adversary: 2
+  rounds:
+  - 0
+  cells:
+  - - 1
+    - 1
+    - pub
+  - - 1
+    - 1
+    - priv
+- name: blocker4
+  base_game: card_blocker(num_cards=4)
+  team:
+  - 0
+  - 1
+  adversary: 2
+  rounds:
+  - 0
+  cells:
+  - - 2
+    - 1
+    - pub
+  - - 1
+    - 0
+    - pub
+  - - 2
+    - 0
+    - pub
+exact_values:
+  attack2x2:
+    0,0,priv: 0.25
+    0,0,pub: 0.25
+    0,1,priv: 0.375
+    0,1,pub: 0.375
+    0,2,priv: 0.375
+    0,2,pub: 0.375
+    1,0,priv: 0.75
+    1,0,pub: 0.25
+    1,1,priv: 0.75
+    1,1,pub: 0.5
+    1,2,priv: 0.75
+    1,2,pub: 0.75
+  blocker4:
+    0,0,priv: 0.1875
+    0,0,pub: 0.1875
+    0,1,priv: 0.1875
+    0,1,pub: 0.1875
+    0,2,priv: 0.1875
+    0,2,pub: 0.1875
+    1,0,priv: 0.375
+    1,0,pub: 0.25
+    1,1,priv: 0.375
+    1,1,pub: 0.375
+    1,2,priv: 0.375
+    1,2,pub: 0.375
+    2,0,priv: 0.75
+    2,0,pub: 0.25
+    2,1,priv: 0.75
+    2,1,pub: 0.5
+    2,2,priv: 0.75
+    2,2,pub: 0.75

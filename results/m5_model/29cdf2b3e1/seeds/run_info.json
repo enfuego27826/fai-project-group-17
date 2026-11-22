@@ -1,0 +1,13 @@
+{
+  "commit": "a56e6ecf513fdcabdbae9a79abfe509e4d1f48da",
+  "dirty": true,
+  "python": "3.11.5",
+  "workers": 4,
+  "threads_per_worker": 1,
+  "started": "2026-11-21 18:05:36",
+  "argv": [
+    "scripts/run_m5.py",
+    "--config",
+    "configs/m5_model.yaml"
+  ]
+}

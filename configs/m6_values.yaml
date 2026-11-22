@@ -1,0 +1,32 @@
+# Milestone 6, task 3: V(k, inf, priv) of the larger games by column generation, to check the
+# closed forms (not assume them): blocker (1 - 1/n) 2^k / n; suit blocker (1 - 1/S) 2^k / (SR);
+# coordinated attack V(0, inf) = (1/n)(1 - 1/n^2) on n x n and V_Com = 1 - 1/n^2.
+# Each (game, k) is a separate run under `timeout 600` (10 minutes); unfinished ones are reported
+# as not finished. Run one at a time with FAI_THREADS=2 FAI_GUROBI_MEM_GB=2.
+experiment: m6_values
+seed: 0
+backend: auto
+simultaneous: true
+solver:
+  enum_limit: 20000
+  tol: 1.0e-9
+  pricing_time_limit: 500
+games:
+  - name: attack4x4
+    base_game: coordinated_attack(rows=4,cols=4)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+  - name: blocker16
+    base_game: card_blocker(num_cards=16)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+  - name: suit4x4
+    base_game: suit_blocker(suits=4,ranks=4)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+k: [0, 1, 2, 4]
+s: [inf]
+rho: [priv, pub]

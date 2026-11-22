@@ -1,0 +1,26 @@
+# Milestone 7, task 2: diagnose the early collapse of the neural team on blocker n = 16, (4, 0, priv)
+# only (target 0.9375; Milestone 6 got 0.33). Milestone 6 learner (MLP 2 x 64 tanh, REINFORCE,
+# batch-mean baseline, Adam lr 1e-3, batch 256) vs exact BR, one change at a time, 3 seeds, fixed
+# budget of 10,000 updates. Values chosen once, not tuned:
+#   (a) entropy bonus 0.05 on the message head, annealed linearly to 0 (as in Milestone 4)
+#   (b) batch 1024
+#   (c) learned state-value baseline (own MLP 2 x 64, Adam lr 1e-3, least squares)
+#   (d) larger hidden layers, 2 x 256
+#   (e) PPO-style clipped surrogate (clip 0.2), 4 epochs per batch
+experiment: m7_neural_diag
+seeds: [0, 1, 2]
+workers: 5
+iterations: 10000
+batch: 256
+lr: 1.0e-3
+hidden: 64
+log_every: 250
+methods:
+  - {name: m6_baseline, opponent: best_response}
+  - {name: a_entropy, opponent: best_response, entropy: 0.05}
+  - {name: b_batch1024, opponent: best_response, batch: 1024}
+  - {name: c_value, opponent: best_response, value_baseline: true}
+  - {name: d_hidden256, opponent: best_response, hidden: 256}
+  - {name: e_ppo4, opponent: best_response, ppo_epochs: 4}
+cells:
+  - [blocker16, 4, 0, priv]

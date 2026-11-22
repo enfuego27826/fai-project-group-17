@@ -1,0 +1,1266 @@
+[
+  {
+    "game": "suit2x4",
+    "k": 0,
+    "s": "0",
+    "rho": "priv",
+    "team_infosets": [
+      0,
+      1
+    ],
+    "adversary_infosets": 1,
+    "terminals": 128,
+    "build_seconds": 0.005296490000546328,
+    "lower": 0.06249999999999998,
+    "upper": 0.06250000001064304,
+    "lower_from": "bilinear",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.0,
+        "bound_on_L": 0.0,
+        "optimal": true,
+        "method": "enumerate",
+        "seconds": 0.0004376640008558752,
+        "leak_bits": 0.0
+      },
+      "bilinear": {
+        "value": 0.06249999999999998,
+        "bound": 0.06250000001064304,
+        "optimal": true,
+        "seconds": 0.004932333000397193,
+        "leak_bits": 0.0
+      }
+    },
+    "leak_strategy": "bilinear",
+    "leak_bits": 0.0,
+    "leak_exploitable": 0.0,
+    "seconds": 0.010960855001030723,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 0,
+    "s": "0",
+    "rho": "pub",
+    "team_infosets": [
+      0,
+      1
+    ],
+    "adversary_infosets": 1,
+    "terminals": 128,
+    "build_seconds": 0.004697434000263456,
+    "lower": 0.06249999999999998,
+    "upper": 0.06250000001064304,
+    "lower_from": "bilinear",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.0,
+        "bound_on_L": 0.0,
+        "optimal": true,
+        "method": "enumerate",
+        "seconds": 0.00022055999943404458,
+        "leak_bits": 0.0
+      },
+      "bilinear": {
+        "value": 0.06249999999999998,
+        "bound": 0.06250000001064304,
+        "optimal": true,
+        "seconds": 0.0037143850004213164,
+        "leak_bits": 0.0
+      }
+    },
+    "leak_strategy": "bilinear",
+    "leak_bits": 0.0,
+    "leak_exploitable": 0.0,
+    "seconds": 0.008867346999977599,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 0,
+    "s": "1",
+    "rho": "priv",
+    "team_infosets": [
+      0,
+      2
+    ],
+    "adversary_infosets": 1,
+    "terminals": 256,
+    "build_seconds": 0.00885872100116103,
+    "lower": 0.0625,
+    "upper": 0.06250000016646723,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.0625,
+        "bound_on_L": 0.0625,
+        "optimal": true,
+        "method": "enumerate",
+        "seconds": 0.00031044800016388763,
+        "leak_bits": 0.0
+      },
+      "bilinear": {
+        "value": 0.06249999999999997,
+        "bound": 0.06250000016646723,
+        "optimal": true,
+        "seconds": 0.005777043999842135,
+        "leak_bits": 0.0
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 0.0,
+    "leak_exploitable": 0.0,
+    "seconds": 0.015136037000047509,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 0,
+    "s": "1",
+    "rho": "pub",
+    "team_infosets": [
+      0,
+      2
+    ],
+    "adversary_infosets": 1,
+    "terminals": 256,
+    "build_seconds": 0.009397875001013745,
+    "lower": 0.0625,
+    "upper": 0.06250000016646723,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.0625,
+        "bound_on_L": 0.0625,
+        "optimal": true,
+        "method": "enumerate",
+        "seconds": 0.0011434079988248413,
+        "leak_bits": 0.0
+      },
+      "bilinear": {
+        "value": 0.06249999999999997,
+        "bound": 0.06250000016646723,
+        "optimal": true,
+        "seconds": 0.00575901100091869,
+        "leak_bits": 0.0
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 0.0,
+    "leak_exploitable": 0.0,
+    "seconds": 0.01653166600044642,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 0,
+    "s": "2",
+    "rho": "priv",
+    "team_infosets": [
+      0,
+      4
+    ],
+    "adversary_infosets": 1,
+    "terminals": 512,
+    "build_seconds": 0.017573064000316663,
+    "lower": 0.0625,
+    "upper": 0.0625000003331696,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.0625,
+        "bound_on_L": 0.0625,
+        "optimal": true,
+        "method": "enumerate",
+        "seconds": 0.006425961999411811,
+        "leak_bits": 0.0
+      },
+      "bilinear": {
+        "value": 0.06249999999999988,
+        "bound": 0.0625000003331696,
+        "optimal": true,
+        "seconds": 0.009976381999877049,
+        "leak_bits": 0.0
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 0.0,
+    "leak_exploitable": 0.0,
+    "seconds": 0.034260288999576005,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 0,
+    "s": "2",
+    "rho": "pub",
+    "team_infosets": [
+      0,
+      4
+    ],
+    "adversary_infosets": 1,
+    "terminals": 512,
+    "build_seconds": 0.017122634999395814,
+    "lower": 0.0625,
+    "upper": 0.0625000003331696,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.0625,
+        "bound_on_L": 0.0625,
+        "optimal": true,
+        "method": "enumerate",
+        "seconds": 0.006215170998984831,
+        "leak_bits": 0.0
+      },
+      "bilinear": {
+        "value": 0.06249999999999988,
+        "bound": 0.0625000003331696,
+        "optimal": true,
+        "seconds": 0.01815272299973003,
+        "leak_bits": 0.0
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 0.0,
+    "leak_exploitable": 0.0,
+    "seconds": 0.04177608999998483,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 0,
+    "s": "inf",
+    "rho": "priv",
+    "team_infosets": [
+      0,
+      1
+    ],
+    "adversary_infosets": 1,
+    "terminals": 128,
+    "build_seconds": 0.0046759650012973,
+    "lower": 0.0625,
+    "upper": 0.0625,
+    "lower_from": "tmecor",
+    "upper_from": "tmecor",
+    "solver_exact": true,
+    "solves": {
+      "tmecor": {
+        "value": 0.0625,
+        "upper": 0.0625,
+        "converged": true,
+        "g": 0.0625,
+        "support_size": 2,
+        "iterations": 2,
+        "seconds": 0.0013640489996760152
+      }
+    },
+    "leak_strategy": "tmecor",
+    "leak_bits": 0.0,
+    "leak_exploitable": 0.0,
+    "seconds": 0.007127177999791456,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 0,
+    "s": "inf",
+    "rho": "pub",
+    "team_infosets": [
+      0,
+      1
+    ],
+    "adversary_infosets": 1,
+    "terminals": 128,
+    "build_seconds": 0.004489007000302081,
+    "lower": 0.0625,
+    "upper": 0.0625,
+    "lower_from": "tmecor",
+    "upper_from": "tmecor",
+    "solver_exact": true,
+    "solves": {
+      "tmecor": {
+        "value": 0.0625,
+        "upper": 0.0625,
+        "converged": true,
+        "g": 0.0625,
+        "support_size": 2,
+        "iterations": 2,
+        "seconds": 0.0012239479983691126
+      }
+    },
+    "leak_strategy": "tmecor",
+    "leak_bits": 0.0,
+    "leak_exploitable": 0.0,
+    "seconds": 0.006676118000541464,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 1,
+    "s": "0",
+    "rho": "priv",
+    "team_infosets": [
+      8,
+      5
+    ],
+    "adversary_infosets": 1,
+    "terminals": 512,
+    "build_seconds": 0.020034675999340834,
+    "lower": 0.125,
+    "upper": 0.125,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.125,
+        "bound_on_L": 0.125,
+        "optimal": true,
+        "method": "enumerate",
+        "seconds": 0.00862353400043503,
+        "leak_bits": 0.5435644431995965
+      },
+      "bilinear": {
+        "value": 0.125,
+        "bound": 0.125,
+        "optimal": true,
+        "seconds": 0.06894464699871605,
+        "leak_bits": 0.5435644431995965
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 0.5435644431995965,
+    "leak_exploitable": 0.13792538097003004,
+    "seconds": 0.09805754399894795,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 1,
+    "s": "0",
+    "rho": "pub",
+    "team_infosets": [
+      8,
+      5
+    ],
+    "adversary_infosets": 4,
+    "terminals": 512,
+    "build_seconds": 0.020187070998872514,
+    "lower": 0.125,
+    "upper": 0.125,
+    "lower_from": "bilinear",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.0,
+        "bound_on_L": 0.0,
+        "optimal": true,
+        "method": "enumerate",
+        "seconds": 0.013132297999618459,
+        "leak_bits": 0.0
+      },
+      "bilinear": {
+        "value": 0.125,
+        "bound": 0.125,
+        "optimal": true,
+        "seconds": 0.07288794799933385,
+        "leak_bits": 0.9544340029249652
+      }
+    },
+    "leak_strategy": "bilinear",
+    "leak_bits": 0.9544340029249652,
+    "leak_exploitable": 0.04879494069539869,
+    "seconds": 0.1067413900000247,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 1,
+    "s": "1",
+    "rho": "priv",
+    "team_infosets": [
+      16,
+      10
+    ],
+    "adversary_infosets": 1,
+    "terminals": 1024,
+    "build_seconds": 0.039513517998784664,
+    "lower": 0.125,
+    "upper": 0.125,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.125,
+        "bound_on_L": 0.125,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 0.013220381000792258,
+        "leak_bits": 0.2935644431995965
+      },
+      "bilinear": {
+        "value": 0.125,
+        "bound": 0.125,
+        "optimal": true,
+        "seconds": 0.13220504200035066,
+        "leak_bits": 0.5435644431995961
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 0.2935644431995965,
+    "leak_exploitable": 2.220446049250313e-16,
+    "seconds": 0.18575830699955986,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 1,
+    "s": "1",
+    "rho": "pub",
+    "team_infosets": [
+      16,
+      10
+    ],
+    "adversary_infosets": 4,
+    "terminals": 1024,
+    "build_seconds": 0.04012746099942888,
+    "lower": 0.125,
+    "upper": 0.125,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.125,
+        "bound_on_L": 0.125,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 0.011574737000046298,
+        "leak_bits": 0.2935644431995965
+      },
+      "bilinear": {
+        "value": 0.125,
+        "bound": 0.125,
+        "optimal": true,
+        "seconds": 0.13198369000019738,
+        "leak_bits": 0.45443400292496516
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 0.2935644431995965,
+    "leak_exploitable": 2.220446049250313e-16,
+    "seconds": 0.184463876999871,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 1,
+    "s": "2",
+    "rho": "priv",
+    "team_infosets": [
+      32,
+      20
+    ],
+    "adversary_infosets": 1,
+    "terminals": 2048,
+    "build_seconds": 0.0796164340008545,
+    "lower": 0.125,
+    "upper": 0.125,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.125,
+        "bound_on_L": 0.125,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 0.021477381998920464,
+        "leak_bits": 0.13792538097003026
+      },
+      "bilinear": {
+        "value": 0.125,
+        "bound": 0.125,
+        "optimal": true,
+        "seconds": 0.267034018999766,
+        "leak_bits": 0.5662451922921399
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 0.13792538097003026,
+    "leak_exploitable": 0.026813279828516556,
+    "seconds": 0.3696326860008412,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 1,
+    "s": "2",
+    "rho": "pub",
+    "team_infosets": [
+      32,
+      20
+    ],
+    "adversary_infosets": 4,
+    "terminals": 2048,
+    "build_seconds": 0.08218034600031388,
+    "lower": 0.125,
+    "upper": 0.125,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.125,
+        "bound_on_L": 0.125,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 0.021704253998905187,
+        "leak_bits": 0.2935644431995965
+      },
+      "bilinear": {
+        "value": 0.125,
+        "bound": 0.125,
+        "optimal": true,
+        "seconds": 0.26524538599915104,
+        "leak_bits": 0.2961252463298516
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 0.2935644431995965,
+    "leak_exploitable": 2.220446049250313e-16,
+    "seconds": 0.370670402999167,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 1,
+    "s": "inf",
+    "rho": "priv",
+    "team_infosets": [
+      8,
+      5
+    ],
+    "adversary_infosets": 1,
+    "terminals": 512,
+    "build_seconds": 0.03392186800010677,
+    "lower": 0.125,
+    "upper": 0.125,
+    "lower_from": "tmecor",
+    "upper_from": "tmecor",
+    "solver_exact": true,
+    "solves": {
+      "tmecor": {
+        "value": 0.125,
+        "upper": 0.125,
+        "converged": true,
+        "g": 0.125,
+        "support_size": 2,
+        "iterations": 3,
+        "seconds": 0.0025919480012817075
+      }
+    },
+    "leak_strategy": "tmecor",
+    "leak_bits": 0.2935644431995965,
+    "leak_exploitable": 2.220446049250313e-16,
+    "seconds": 0.03884293900046032,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 1,
+    "s": "inf",
+    "rho": "pub",
+    "team_infosets": [
+      8,
+      5
+    ],
+    "adversary_infosets": 4,
+    "terminals": 512,
+    "build_seconds": 0.024769571000433643,
+    "lower": 0.125,
+    "upper": 0.125,
+    "lower_from": "tmecor",
+    "upper_from": "tmecor",
+    "solver_exact": true,
+    "solves": {
+      "tmecor": {
+        "value": 0.125,
+        "upper": 0.125,
+        "converged": true,
+        "g": 0.125,
+        "support_size": 2,
+        "iterations": 9,
+        "seconds": 0.007087345999025274
+      }
+    },
+    "leak_strategy": "tmecor",
+    "leak_bits": 0.2935644431995965,
+    "leak_exploitable": 2.220446049250313e-16,
+    "seconds": 0.03610407099949953,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 2,
+    "s": "0",
+    "rho": "priv",
+    "team_infosets": [
+      8,
+      17
+    ],
+    "adversary_infosets": 1,
+    "terminals": 2048,
+    "build_seconds": 0.0782546580012422,
+    "lower": 0.25,
+    "upper": 0.25,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.25,
+        "bound_on_L": 0.25,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 0.02615994900043006,
+        "leak_bits": 1.9056390622295662
+      },
+      "bilinear": {
+        "value": 0.25,
+        "bound": 0.25,
+        "optimal": true,
+        "seconds": 0.27157728299971495,
+        "leak_bits": 1.548794940695398
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 1.9056390622295662,
+    "leak_exploitable": 0.40563906222956625,
+    "seconds": 0.37726020000081917,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 2,
+    "s": "0",
+    "rho": "pub",
+    "team_infosets": [
+      8,
+      17
+    ],
+    "adversary_infosets": 16,
+    "terminals": 2048,
+    "build_seconds": 0.08106923699961044,
+    "lower": 0.25,
+    "upper": 0.25,
+    "lower_from": "bilinear",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.0,
+        "bound_on_L": -0.0,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 0.09918326700062607,
+        "leak_bits": 0.9544340029249652
+      },
+      "bilinear": {
+        "value": 0.25,
+        "bound": 0.25,
+        "optimal": true,
+        "seconds": 0.2914069419985026,
+        "leak_bits": 2.0
+      }
+    },
+    "leak_strategy": "bilinear",
+    "leak_bits": 2.0,
+    "leak_exploitable": 0.0,
+    "seconds": 0.4730193480008893,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 2,
+    "s": "1",
+    "rho": "priv",
+    "team_infosets": [
+      16,
+      34
+    ],
+    "adversary_infosets": 1,
+    "terminals": 4096,
+    "build_seconds": 0.1593250629994145,
+    "lower": 0.25,
+    "upper": 0.25,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.25,
+        "bound_on_L": 0.25,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 0.05207999999947788,
+        "leak_bits": 1.2578560636920493
+      },
+      "bilinear": {
+        "value": 0.25,
+        "bound": 0.25,
+        "optimal": true,
+        "seconds": 0.5609320890016534,
+        "leak_bits": 0.47532480532810695
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 1.2578560636920493,
+    "leak_exploitable": 0.4300365325772657,
+    "seconds": 0.7746100739987014,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 2,
+    "s": "1",
+    "rho": "pub",
+    "team_infosets": [
+      16,
+      34
+    ],
+    "adversary_infosets": 16,
+    "terminals": 4096,
+    "build_seconds": 0.16264234599839256,
+    "lower": 0.25,
+    "upper": 0.25,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.25,
+        "bound_on_L": 0.25,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 0.04563482100093097,
+        "leak_bits": 0.7947367178034828
+      },
+      "bilinear": {
+        "value": 0.25,
+        "bound": 0.25,
+        "optimal": true,
+        "seconds": 0.5704065890004131,
+        "leak_bits": 1.214101763603332
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 0.7947367178034828,
+    "leak_exploitable": 0.02033924745578375,
+    "seconds": 0.7812211299988121,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 2,
+    "s": "2",
+    "rho": "priv",
+    "team_infosets": [
+      32,
+      68
+    ],
+    "adversary_infosets": 1,
+    "terminals": 8192,
+    "build_seconds": 0.32688085100016906,
+    "lower": 0.25,
+    "upper": 0.25,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.25,
+        "bound_on_L": 0.25,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 0.07881384499887645,
+        "leak_bits": 1.5306390622295662
+      },
+      "bilinear": {
+        "value": 0.25,
+        "bound": 0.25,
+        "optimal": true,
+        "seconds": 1.0999487530007173,
+        "leak_bits": 1.4292292966721742
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 1.5306390622295662,
+    "leak_exploitable": 0.40563906222956625,
+    "seconds": 1.5102395640005852,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 2,
+    "s": "2",
+    "rho": "pub",
+    "team_infosets": [
+      32,
+      68
+    ],
+    "adversary_infosets": 16,
+    "terminals": 8192,
+    "build_seconds": 0.3257260739992489,
+    "lower": 0.25,
+    "upper": 0.25,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.25,
+        "bound_on_L": 0.25,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 0.14473045900012949,
+        "leak_bits": 0.44332695224609076
+      },
+      "bilinear": {
+        "value": 0.25,
+        "bound": 0.25,
+        "optimal": true,
+        "seconds": 1.120040045998394,
+        "leak_bits": 0.6040301730294653
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 0.44332695224609076,
+    "leak_exploitable": 0.03173074672454179,
+    "seconds": 1.596212297999955,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 2,
+    "s": "inf",
+    "rho": "priv",
+    "team_infosets": [
+      8,
+      17
+    ],
+    "adversary_infosets": 1,
+    "terminals": 2048,
+    "build_seconds": 0.0776830560007511,
+    "lower": 0.25,
+    "upper": 0.25,
+    "lower_from": "tmecor",
+    "upper_from": "tmecor",
+    "solver_exact": true,
+    "solves": {
+      "tmecor": {
+        "value": 0.25,
+        "upper": 0.25,
+        "converged": true,
+        "g": 0.25,
+        "support_size": 2,
+        "iterations": 3,
+        "seconds": 0.04716406499937875
+      }
+    },
+    "leak_strategy": "tmecor",
+    "leak_bits": 0.798794940695398,
+    "leak_exploitable": 0.0,
+    "seconds": 0.18193045100088057,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 2,
+    "s": "inf",
+    "rho": "pub",
+    "team_infosets": [
+      8,
+      17
+    ],
+    "adversary_infosets": 16,
+    "terminals": 2048,
+    "build_seconds": 0.08026608399995894,
+    "lower": 0.25,
+    "upper": 0.25,
+    "lower_from": "tmecor",
+    "upper_from": "tmecor",
+    "solver_exact": true,
+    "solves": {
+      "tmecor": {
+        "value": 0.25,
+        "upper": 0.25,
+        "converged": true,
+        "g": 0.25,
+        "support_size": 4,
+        "iterations": 31,
+        "seconds": 0.4551861099898815
+      }
+    },
+    "leak_strategy": "tmecor",
+    "leak_bits": 0.5570656440232233,
+    "leak_exploitable": 0.0,
+    "seconds": 0.5945850900006917,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 3,
+    "s": "0",
+    "rho": "priv",
+    "team_infosets": [
+      8,
+      65
+    ],
+    "adversary_infosets": 1,
+    "terminals": 8192,
+    "build_seconds": 0.33061089500006346,
+    "lower": 0.5,
+    "upper": 0.5,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.5,
+        "bound_on_L": 0.5,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 0.14594905900048616,
+        "leak_bits": 3.0
+      },
+      "bilinear": {
+        "value": 0.5,
+        "bound": 0.5,
+        "optimal": true,
+        "seconds": 1.208517758999733,
+        "leak_bits": 3.0
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 3.0,
+    "leak_exploitable": 1.0,
+    "seconds": 1.6902454729988676,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 3,
+    "s": "0",
+    "rho": "pub",
+    "team_infosets": [
+      8,
+      65
+    ],
+    "adversary_infosets": 64,
+    "terminals": 8192,
+    "build_seconds": 0.3374548159990809,
+    "lower": 0.25,
+    "upper": 0.4456956611700491,
+    "lower_from": "Prop1 k (from k=2)",
+    "upper_from": "bilinear",
+    "solver_exact": false,
+    "solves": {
+      "L": {
+        "value": 0.0,
+        "bound_on_L": -0.0,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 0.28665391100003035,
+        "leak_bits": 1.9056390622295662
+      },
+      "bilinear": {
+        "value": 0.24999991420423173,
+        "bound": 0.4456956611700491,
+        "optimal": false,
+        "seconds": 301.0277508279996,
+        "leak_bits": 1.9999956911627148
+      }
+    },
+    "leak_strategy": "bilinear",
+    "leak_bits": 1.9999956911627148,
+    "leak_exploitable": 1.4210854715202004e-13,
+    "seconds": 302.0342019169984,
+    "certified": false,
+    "status": "bound"
+  },
+  {
+    "game": "suit2x4",
+    "k": 3,
+    "s": "1",
+    "rho": "priv",
+    "team_infosets": [
+      16,
+      130
+    ],
+    "adversary_infosets": 1,
+    "terminals": 16384,
+    "build_seconds": 0.6476151909992041,
+    "lower": 0.5,
+    "upper": 0.5,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.5,
+        "bound_on_L": 0.5,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 0.3387176050000562,
+        "leak_bits": 2.125
+      },
+      "bilinear": {
+        "value": 0.5,
+        "bound": 0.5,
+        "optimal": true,
+        "seconds": 2.3287722029999713,
+        "leak_bits": 3.0
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 2.125,
+    "leak_exploitable": 0.5,
+    "seconds": 3.3266222269994614,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 3,
+    "s": "1",
+    "rho": "pub",
+    "team_infosets": [
+      16,
+      130
+    ],
+    "adversary_infosets": 64,
+    "terminals": 16384,
+    "build_seconds": 0.6757694850002736,
+    "lower": 0.5,
+    "upper": 0.5,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.5,
+        "bound_on_L": 0.5,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 0.5098458229986136,
+        "leak_bits": 2.0
+      },
+      "bilinear": {
+        "value": 0.49999999999999567,
+        "bound": 0.5,
+        "optimal": true,
+        "seconds": 4.808324146000814,
+        "leak_bits": 2.000000000000001
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 2.0,
+    "leak_exploitable": 0.0,
+    "seconds": 6.004027724999105,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 3,
+    "s": "2",
+    "rho": "priv",
+    "team_infosets": [
+      32,
+      260
+    ],
+    "adversary_infosets": 1,
+    "terminals": 32768,
+    "build_seconds": 1.3163056730008975,
+    "lower": 0.5,
+    "upper": 0.5,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": true,
+    "solves": {
+      "L": {
+        "value": 0.5,
+        "bound_on_L": 0.5,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 0.3947387459993479,
+        "leak_bits": 3.0
+      },
+      "bilinear": {
+        "value": 0.5,
+        "bound": 0.5,
+        "optimal": true,
+        "seconds": 20.194537665000098,
+        "leak_bits": 2.0728237947404136
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 3.0,
+    "leak_exploitable": 1.0,
+    "seconds": 21.92924706300073,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 3,
+    "s": "2",
+    "rho": "pub",
+    "team_infosets": [
+      32,
+      260
+    ],
+    "adversary_infosets": 64,
+    "terminals": 32768,
+    "build_seconds": 1.3946519500004797,
+    "lower": 0.5,
+    "upper": 0.5000000000000001,
+    "lower_from": "L",
+    "upper_from": "bilinear",
+    "solver_exact": false,
+    "solves": {
+      "L": {
+        "value": 0.5,
+        "bound_on_L": 0.5,
+        "optimal": true,
+        "method": "milp",
+        "seconds": 1.9383490349991916,
+        "leak_bits": 2.0
+      },
+      "bilinear": {
+        "value": 0.4999990846287748,
+        "bound": 0.5000000000000001,
+        "optimal": false,
+        "seconds": 304.1038759699986,
+        "leak_bits": 1.8002800485992223
+      }
+    },
+    "leak_strategy": "L",
+    "leak_bits": 2.0,
+    "leak_exploitable": 0.0,
+    "seconds": 307.46107179200044,
+    "certified": true,
+    "status": "theorem"
+  },
+  {
+    "game": "suit2x4",
+    "k": 3,
+    "s": "inf",
+    "rho": "priv",
+    "team_infosets": [
+      8,
+      65
+    ],
+    "adversary_infosets": 1,
+    "terminals": 8192,
+    "build_seconds": 0.33909260099972016,
+    "lower": 0.5,
+    "upper": 0.5,
+    "lower_from": "tmecor",
+    "upper_from": "tmecor",
+    "solver_exact": true,
+    "solves": {
+      "tmecor": {
+        "value": 0.5,
+        "upper": 0.5,
+        "converged": true,
+        "g": 0.5,
+        "support_size": 1,
+        "iterations": 4,
+        "seconds": 0.09675971099932212
+      }
+    },
+    "leak_strategy": "tmecor",
+    "leak_bits": 3.0,
+    "leak_exploitable": 1.0,
+    "seconds": 0.44381109999994806,
+    "certified": true,
+    "status": "exact"
+  },
+  {
+    "game": "suit2x4",
+    "k": 3,
+    "s": "inf",
+    "rho": "pub",
+    "team_infosets": [
+      8,
+      65
+    ],
+    "adversary_infosets": 64,
+    "terminals": 8192,
+    "build_seconds": 0.3435256370012212,
+    "lower": 0.5,
+    "upper": 0.5,
+    "lower_from": "tmecor",
+    "upper_from": "tmecor",
+    "solver_exact": true,
+    "solves": {
+      "tmecor": {
+        "value": 0.5,
+        "upper": 0.5,
+        "converged": true,
+        "g": 0.5,
+        "support_size": 6,
+        "iterations": 139,
+        "seconds": 0.9414070740167517
+      }
+    },
+    "leak_strategy": "tmecor",
+    "leak_bits": 0.8890976555739138,
+    "leak_exploitable": 0.0,
+    "seconds": 1.365025078999679,
+    "certified": true,
+    "status": "exact"
+  }
+]

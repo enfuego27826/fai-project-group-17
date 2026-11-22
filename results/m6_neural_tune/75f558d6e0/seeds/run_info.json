@@ -1,0 +1,13 @@
+{
+  "commit": "42a7b13e6bda1abf6393d39afedbb8924a45587d",
+  "dirty": true,
+  "python": "3.11.5",
+  "workers": 6,
+  "threads_per_worker": 1,
+  "started": "2026-11-22 10:37:51",
+  "argv": [
+    "scripts/run_m6.py",
+    "--config",
+    "configs/m6_neural_tune.yaml"
+  ]
+}

@@ -1,0 +1,24 @@
+# Milestone 4, task 5: PG vs BR (Milestone 3 hyperparameters) with 20 seeds, 95% confidence intervals.
+experiment: m4_seeds
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]
+workers: 8
+exact_values_from: configs/m3_marl.yaml
+methods:
+  - {name: pg_vs_br, trainer: pg, opponent: best_response, lr: 8.0, iterations: 10000, batch: 256, outputs: [last]}
+games:
+  - name: attack2x2
+    base_game: coordinated_attack(rows=2,cols=2)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1]
+    s: [0, 1, 2]
+    rho: [priv, pub]
+  - name: blocker4
+    base_game: card_blocker(num_cards=4)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1, 2]
+    s: [0, 1, 2]
+    rho: [priv, pub]

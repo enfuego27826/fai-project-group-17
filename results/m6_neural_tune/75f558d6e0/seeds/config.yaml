@@ -1,0 +1,30 @@
+experiment: m6_neural_tune
+seeds:
+- 100
+- 101
+- 102
+workers: 6
+iterations: 10000
+batch: 256
+lr: 0.003
+hidden: 64
+log_every: 250
+methods:
+- name: lr1e-3
+  opponent: best_response
+  lr: 0.001
+- name: lr3e-3
+  opponent: best_response
+  lr: 0.003
+- name: lr1e-2
+  opponent: best_response
+  lr: 0.01
+cells:
+- - blocker16
+  - 4
+  - 4
+  - pub
+cell_checks:
+  blocker16 4,4,pub:
+    check: pad
+_out: results/m6_neural_tune/75f558d6e0/seeds

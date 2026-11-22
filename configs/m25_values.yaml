@@ -1,0 +1,70 @@
+# Milestone 2.5: coordinated attack, team Liar's Dice, blocker n = 8 at finite s.
+experiment: m25_values
+seed: 0
+backend: auto              # gurobi if a licence starts, else highs (the exact finite-s solver needs gurobi)
+simultaneous: true         # teammate 1 does not see m_0 before sending m_1
+solver:
+  enum_limit: 20000
+  tol: 1.0e-9
+  pricing_time_limit: 1200
+  key_pure_enum_limit: 2000000
+games:
+  - name: attack2x2
+    base_game: coordinated_attack(rows=2,cols=2)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1]
+    s: [0, 1, 2, inf]
+    rho: [priv, pub]
+    lower_bound: true      # L(k, s, rho), key-indexed joint pure plans
+    exact: true            # exact bilinear solve in every finite-s cell
+    time_limit: 300        # only (1, 0, pub) hits it, and Claim 2 closes that cell
+    v_com: true            # also report V_Com of the merged-team game
+  - name: attack3x3
+    base_game: coordinated_attack(rows=3,cols=3)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1, 2]
+    s: [0, 1, 2, inf]
+    rho: [priv, pub]
+    lower_bound: true
+    exact: true
+    time_limit: 600        # 10 minutes per solve (milestone time box)
+    v_com: true
+  - name: liars_dice_1d3f
+    base_game: team_liars_dice(dice_per_player=1,faces=3,adversary=2)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0]                 # kill criterion met: V(0, inf) = V_Com = 1/9 (results/m25_values)
+    s: [inf]
+    rho: [priv]
+    v_com: true
+    stop_at_v_com: true    # stop column generation once the master reaches V_Com (Prop. 1)
+  - name: blocker8
+    base_game: card_blocker(num_cards=8)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [2, 3]
+    s: [0, 1, 2, inf]
+    rho: [priv, pub]
+    lower_bound: true
+    time_limit: 300        # L solves; the exact solve runs only in the cells below
+    exact_cells: [[2, 0, pub, 180], [3, 2, pub, 2400]]   # about one hour in total
+# Upper bounds proved by hand, used like theorems.
+# Claim 1 (implied by Lemma 1 of report/main.tex): blocker V(k, s, pub) <= 2^s / 4.
+# Claim 2 (implied by Lemma 1 of report/main.tex): coordinated attack V(k, s, pub) <= 2^s / 4, any grid.
+hand_upper_bounds:
+  - {game: attack2x2, k: 1, s: 0, rho: pub, upper: 0.25, ref: "Claim 2"}
+  - {game: attack2x2, k: 1, s: 1, rho: pub, upper: 0.5, ref: "Claim 2"}
+  - {game: attack3x3, k: 1, s: 0, rho: pub, upper: 0.25, ref: "Claim 2"}
+  - {game: attack3x3, k: 2, s: 0, rho: pub, upper: 0.25, ref: "Claim 2"}
+  - {game: attack3x3, k: 1, s: 1, rho: pub, upper: 0.5, ref: "Claim 2"}
+  - {game: attack3x3, k: 2, s: 1, rho: pub, upper: 0.5, ref: "Claim 2"}
+  - {game: blocker8, k: 2, s: 0, rho: pub, upper: 0.25, ref: "Claim 1"}
+  - {game: blocker8, k: 3, s: 0, rho: pub, upper: 0.25, ref: "Claim 1"}
+  - {game: blocker8, k: 2, s: 1, rho: pub, upper: 0.5, ref: "Claim 1"}
+  - {game: blocker8, k: 3, s: 1, rho: pub, upper: 0.5, ref: "Claim 1"}

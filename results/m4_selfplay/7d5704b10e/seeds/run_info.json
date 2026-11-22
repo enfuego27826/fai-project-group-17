@@ -1,0 +1,13 @@
+{
+  "commit": "b2dc35a9bd646aab123ad370fdb926ca87022f08",
+  "dirty": true,
+  "python": "3.11.5",
+  "workers": 8,
+  "threads_per_worker": 1,
+  "started": "2026-11-21 16:12:16",
+  "argv": [
+    "scripts/run_m4.py",
+    "--config",
+    "configs/m4_selfplay.yaml"
+  ]
+}

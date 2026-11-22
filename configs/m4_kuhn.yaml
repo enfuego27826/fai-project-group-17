@@ -1,0 +1,33 @@
+# Milestone 4, task 3: learning on 3-player Kuhn poker with a private channel (team {0, 1}, adversary 2).
+# Same learners and hyperparameters as on the toy games (no Kuhn-specific tuning).
+experiment: m4_kuhn
+seeds: [0, 1, 2, 3, 4]
+workers: 8
+methods:
+  - {name: pg_vs_br, trainer: pg, opponent: best_response, lr: 8.0, iterations: 10000, batch: 256, outputs: [last, avg]}
+  - {name: self_play, trainer: pg, opponent: learning, lr: 8.0, iterations: 10000, batch: 256, outputs: [last, avg]}
+  - {name: psro, trainer: psro, iterations: 20, br_iterations: 1500, batch: 256, lr: 8.0, outputs: [single]}
+games:
+  - name: kuhn3
+    base_game: kuhn_poker(players=3)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1, 2]
+    s: [0, 1, 2]
+    rho: [priv]
+# Values from results/m2_values (kuhn3); intervals where only bounds are known.
+#   V(0, 0) = V_TME: a behavioral strategy guarantees -1/24 - 4.5e-10, upper bound V_Cor = -1/24.
+#   V(0, s >= 1) = -1/24 (L = V_Cor). V(1, 1) = V(1, 2) = 0 (L = V(1, inf) = 0).
+#   V(1, 0), V(2, 0) in [-1/24, 0]. V(2, s >= 1) = 0 (>= V(1, 1) = 0, <= V_Com = 0).
+exact_values:
+  kuhn3:
+    "0,0,priv": [-0.0416666671, -0.0416666666666667]
+    "0,1,priv": -0.0416666666666667
+    "0,2,priv": -0.0416666666666667
+    "1,0,priv": [-0.0416666666666667, 0.0]
+    "1,1,priv": 0.0
+    "1,2,priv": 0.0
+    "2,0,priv": [-0.0416666666666667, 0.0]
+    "2,1,priv": 0.0
+    "2,2,priv": 0.0

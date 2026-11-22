@@ -1,0 +1,27 @@
+# Milestone 4, task 2: Team-PSRO-lite, no exact best response inside training.
+# Output: the single team policy with the best worst case against the learned adversary
+# population (argmax_i min_j M[i, j]); the meta-mixture would be a correlation device.
+# Best responses: REINFORCE with lr 8 (the PG step size; not tuned for PSRO).
+experiment: m4_psro
+seeds: [0, 1, 2, 3, 4]
+workers: 8
+exact_values_from: configs/m3_marl.yaml
+methods:
+  - {name: psro, trainer: psro, iterations: 20, br_iterations: 1500, batch: 256, lr: 8.0, outputs: [single]}
+games:
+  - name: attack2x2
+    base_game: coordinated_attack(rows=2,cols=2)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1]
+    s: [0, 1, 2]
+    rho: [priv, pub]
+  - name: blocker4
+    base_game: card_blocker(num_cards=4)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1, 2]
+    s: [0, 1, 2]
+    rho: [priv, pub]

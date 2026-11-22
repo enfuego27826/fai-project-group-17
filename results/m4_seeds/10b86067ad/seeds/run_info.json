@@ -1,0 +1,13 @@
+{
+  "commit": "5882dee84854d77a1d4b3161ac87dd8711568b1a",
+  "dirty": true,
+  "python": "3.11.5",
+  "workers": 8,
+  "threads_per_worker": 1,
+  "started": "2026-11-21 16:32:30",
+  "argv": [
+    "scripts/run_m4.py",
+    "--config",
+    "configs/m4_seeds.yaml"
+  ]
+}

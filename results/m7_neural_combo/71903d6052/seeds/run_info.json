@@ -1,0 +1,13 @@
+{
+  "commit": "e1403483bab6855fe0765e84ec1a5fa8fca397e3",
+  "dirty": true,
+  "python": "3.11.5",
+  "workers": 5,
+  "threads_per_worker": 1,
+  "started": "2026-11-22 12:30:10",
+  "argv": [
+    "scripts/run_m6.py",
+    "--config",
+    "configs/m7_neural_combo.yaml"
+  ]
+}

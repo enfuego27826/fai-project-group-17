@@ -1,0 +1,41 @@
+# Milestone 7, task 1: tabular team at scale with symmetry-breaking initialization. Tabular learner
+# (M3/M6 control: softmax per information state, SGD lr 8, batch 256, 10,000 iterations) vs exact BR
+# on the 18 Milestone 6 task 3 cells, logits iid N(0, sigma^2) with sigma = 1, chosen once on
+# blocker n = 16 (4, 0, priv) (configs/m7_tabinit_tune.yaml: mean g 0.93710 at sigma 1, 0.93708 at
+# 0.5, 0.833 at 2; 0.5 and 1 tie, highest mean taken). Checks as in Milestone 6 task 3.
+experiment: m7_tabinit
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+workers: 3
+iterations: 10000
+batch: 256
+lr: 8.0
+hidden: 64
+log_every: 250
+methods:
+  - {name: tabular_sigma1, opponent: best_response, policy: tabular, init_scale: 1.0}
+cells:
+- [blocker16, 2, 2, pub]
+- [blocker16, 2, 1, pub]
+- [blocker16, 2, 0, pub]
+- [blocker16, 4, 4, pub]
+- [blocker16, 4, 2, pub]
+- [blocker16, 4, 1, pub]
+- [blocker16, 4, 0, pub]
+- [blocker16, 4, 0, priv]
+- [suit4x4, 4, 4, pub]
+- [suit4x4, 4, 2, pub]
+- [suit4x4, 4, 1, pub]
+- [suit4x4, 2, 2, pub]
+- [suit4x4, 4, 0, priv]
+- [attack4x4, 2, 4, pub]
+- [attack4x4, 2, 2, pub]
+- [attack4x4, 2, 1, pub]
+- [attack4x4, 2, 0, pub]
+- [attack4x4, 2, 0, priv]
+cell_checks:
+  blocker16 2,2,pub: {check: pad}
+  blocker16 4,4,pub: {check: pad}
+  attack4x4 2,4,pub: {check: pad}
+  suit4x4 4,4,pub: {check: suit pad}
+  suit4x4 4,2,pub: {check: suit pad}
+  suit4x4 2,2,pub: {check: suit pad}

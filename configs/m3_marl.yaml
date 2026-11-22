@@ -1,0 +1,70 @@
+# Milestone 3: MARL (team policy gradient vs an exact best response) on the two fully solved games.
+experiment: m3_marl
+seeds: [0, 1, 2, 3, 4]
+workers: 8                 # parallel single-threaded processes (laptop cap: 8 CPU threads in total)
+methods:                   # same learner and hyperparameters; only the training adversary differs
+  - team_pg_vs_exact_br    # main: exact best response every iteration
+  - self_play              # second: the adversary learns by policy gradient too
+learner:
+  iterations: 10000
+  batch: 256               # episodes per iteration -> 2,560,000 episodes per run
+  lr: 8.0                  # chosen once on blocker4 (2, 2, pub) from {1, 2, 4, 8}, 3 seeds; not tuned per cell
+  log_every: 50
+  init_scale: 0.0          # uniform initial policies
+games:
+  - name: attack2x2
+    base_game: coordinated_attack(rows=2,cols=2)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1]
+    s: [0, 1, 2]
+    rho: [priv, pub]
+  - name: blocker4
+    base_game: card_blocker(num_cards=4)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1, 2]
+    s: [0, 1, 2]
+    rho: [priv, pub]
+# Exact V(k, s, rho) from results/m2_values (blocker4) and results/m25_values (attack2x2).
+# Every entry is exact or certified by theorem; none is a bound.
+exact_values:
+  attack2x2:
+    "0,0,priv": 0.25
+    "0,0,pub": 0.25
+    "0,1,priv": 0.375
+    "0,1,pub": 0.375
+    "0,2,priv": 0.375
+    "0,2,pub": 0.375
+    "1,0,priv": 0.75
+    "1,0,pub": 0.25        # theorem (Claim 2)
+    "1,1,priv": 0.75
+    "1,1,pub": 0.5
+    "1,2,priv": 0.75
+    "1,2,pub": 0.75
+  blocker4:
+    "0,0,priv": 0.1875
+    "0,0,pub": 0.1875
+    "0,1,priv": 0.1875
+    "0,1,pub": 0.1875
+    "0,2,priv": 0.1875
+    "0,2,pub": 0.1875
+    "1,0,priv": 0.375
+    "1,0,pub": 0.25
+    "1,1,priv": 0.375
+    "1,1,pub": 0.375
+    "1,2,priv": 0.375
+    "1,2,pub": 0.375
+    "2,0,priv": 0.75
+    "2,0,pub": 0.25        # theorem (Claim 1 + Prop. 1 in k)
+    "2,1,priv": 0.75
+    "2,1,pub": 0.5         # theorem (Claim 1 + L)
+    "2,2,priv": 0.75
+    "2,2,pub": 0.75
+curve_cells:               # learning-curve plot: the behavior-check cells
+  - [attack2x2, 0, 1, pub]
+  - [attack2x2, 1, 0, pub]
+  - [blocker4, 1, 0, pub]
+  - [blocker4, 2, 2, pub]

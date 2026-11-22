@@ -1,0 +1,34 @@
+experiment: m7_neural_gate
+seeds:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+workers: 7
+iterations: 10000
+batch: 256
+lr: 0.001
+hidden: 64
+log_every: 250
+methods:
+- name: ppo_hidden256
+  opponent: best_response
+  ppo_epochs: 4
+  hidden: 256
+cells:
+- - suit4x4
+  - 4
+  - 0
+  - priv
+- - attack4x4
+  - 2
+  - 0
+  - priv
+cell_checks: {}
+_out: results/m7_neural_gate/86d181b6e2/seeds

@@ -1,0 +1,13 @@
+{
+  "commit": "77beab262b39f1c34109ffa8df63ab3398217460",
+  "dirty": true,
+  "python": "3.11.5",
+  "workers": 7,
+  "threads_per_worker": 1,
+  "started": "2026-11-22 13:52:14",
+  "argv": [
+    "scripts/run_m5.py",
+    "--config",
+    "configs/m8_resp.yaml"
+  ]
+}

@@ -1,0 +1,12 @@
+# Python 3.11 (OpenSpiel wheels). Versions used for every result in this repository.
+open-spiel==2.0.2
+numpy==2.4.6
+scipy==1.17.1
+pyyaml==6.0.3
+matplotlib==3.11.2
+pytest==9.2.0
+# Exact solvers only (column generation, bilinear finite-s solves). The pip wheel installs without a
+# licence; without one the solvers fall back to HiGHS (through SciPy) and large models are slow.
+gurobipy==13.0.3
+# This repository as a package (games, eval, solvers, learning)
+-e .

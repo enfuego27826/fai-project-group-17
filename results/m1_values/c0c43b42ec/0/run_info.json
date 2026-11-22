@@ -1,0 +1,17 @@
+{
+  "commit": "uncommitted",
+  "dirty": true,
+  "python": "3.11.5",
+  "open_spiel": "2.0.2",
+  "backend": "gurobi",
+  "threads": 2,
+  "started": "2026-10-31 19:41:41",
+  "argv": [
+    "scripts/run_values.py",
+    "--config",
+    "configs/m1_values.yaml",
+    "--seed",
+    "0",
+    "--verbose"
+  ]
+}

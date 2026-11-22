@@ -1,0 +1,26 @@
+# Milestone 4, task 4: are the PG vs BR failures optimization? The five worst cells of Milestone 3
+# (gap: blocker4 (2,1,pub) 0.142, attack2x2 (1,1,pub) 0.108, attack2x2 (1,1,priv) 0.080,
+# blocker4 (1,0,pub) 0.072, blocker4 (2,0,pub) 0.065). Variants (not tuned):
+#   baseline/last = Milestone 3; (b) baseline/avg = linear iterate averaging;
+#   (a) decay = lr_t = 8 / sqrt(t + 1); (c) entropy = bonus 0.05 annealed linearly to 0.
+experiment: m4_optim
+seeds: [0, 1, 2, 3, 4]
+workers: 8
+exact_values_from: configs/m3_marl.yaml
+methods:
+  - {name: baseline, trainer: pg, opponent: best_response, lr: 8.0, iterations: 10000, batch: 256, outputs: [last, avg]}
+  - {name: decay, trainer: pg, opponent: best_response, lr: 8.0, lr_decay: sqrt, iterations: 10000, batch: 256, outputs: [last, avg]}
+  - {name: entropy, trainer: pg, opponent: best_response, lr: 8.0, entropy: 0.05, iterations: 10000, batch: 256, outputs: [last, avg]}
+games:
+  - name: attack2x2
+    base_game: coordinated_attack(rows=2,cols=2)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    cells: [[1, 1, pub], [1, 1, priv]]
+  - name: blocker4
+    base_game: card_blocker(num_cards=4)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    cells: [[2, 1, pub], [1, 0, pub], [2, 0, pub]]

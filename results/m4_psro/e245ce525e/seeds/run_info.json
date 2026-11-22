@@ -1,0 +1,13 @@
+{
+  "commit": "fd2fc052aa8e32807a605141192fe8303c32aa0e",
+  "dirty": true,
+  "python": "3.11.5",
+  "workers": 8,
+  "threads_per_worker": 1,
+  "started": "2026-11-21 16:14:16",
+  "argv": [
+    "scripts/run_m4.py",
+    "--config",
+    "configs/m4_psro.yaml"
+  ]
+}

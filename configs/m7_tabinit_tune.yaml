@@ -1,0 +1,18 @@
+# Milestone 7, task 1: choose sigma once on one private cell. Tabular learner (M3: softmax per
+# information state, SGD lr 8, batch 256, 10,000 iterations) vs exact BR on blocker n = 16,
+# (4, 0, priv), logits initialized iid N(0, sigma^2), sigma in {0.5, 1, 2}, 3 tuning seeds
+# (100 to 102, disjoint from the main seeds). Pick the sigma with the highest mean g.
+experiment: m7_tabinit_tune
+seeds: [100, 101, 102]
+workers: 3
+iterations: 10000
+batch: 256
+lr: 8.0
+hidden: 64
+log_every: 250
+methods:
+  - {name: sigma0.5, opponent: best_response, policy: tabular, init_scale: 0.5}
+  - {name: sigma1, opponent: best_response, policy: tabular, init_scale: 1.0}
+  - {name: sigma2, opponent: best_response, policy: tabular, init_scale: 2.0}
+cells:
+  - [blocker16, 4, 0, priv]

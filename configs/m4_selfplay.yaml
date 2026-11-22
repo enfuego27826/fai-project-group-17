@@ -1,0 +1,27 @@
+# Milestone 4, task 1: self-play with its own tuned step size (configs/m4_tune_selfplay.yaml chose
+# lr 8 from {0.5, 1, 2, 4, 8} on blocker4 (2, 2, pub), 3 seeds, by the averaged policy's mean g),
+# last iterate and linear iterate averaging reported separately; PG vs BR with averaging for comparison.
+experiment: m4_selfplay
+seeds: [0, 1, 2, 3, 4]
+workers: 8
+exact_values_from: configs/m3_marl.yaml
+methods:
+  - {name: pg_vs_br, trainer: pg, opponent: best_response, lr: 8.0, iterations: 10000, batch: 256, outputs: [last, avg]}
+  - {name: self_play, trainer: pg, opponent: learning, lr: 8.0, iterations: 10000, batch: 256, outputs: [last, avg]}
+games:
+  - name: attack2x2
+    base_game: coordinated_attack(rows=2,cols=2)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1]
+    s: [0, 1, 2]
+    rho: [priv, pub]
+  - name: blocker4
+    base_game: card_blocker(num_cards=4)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1, 2]
+    s: [0, 1, 2]
+    rho: [priv, pub]

@@ -1,0 +1,13 @@
+{
+  "commit": "b3466e5bdf4259462d338234aa0350353238b9ff",
+  "dirty": true,
+  "python": "3.11.5",
+  "workers": 8,
+  "threads_per_worker": 1,
+  "started": "2026-11-21 15:01:06",
+  "argv": [
+    "scripts/run_marl.py",
+    "--config",
+    "configs/m3_marl.yaml"
+  ]
+}

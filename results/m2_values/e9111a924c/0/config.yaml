@@ -1,0 +1,93 @@
+experiment: m2_values
+seed: 0
+backend: auto
+simultaneous: true
+solver:
+  enum_limit: 20000
+  tol: 1.0e-09
+  pricing_time_limit: 1200
+  key_pure_enum_limit: 2000000
+games:
+- name: blocker4
+  base_game: card_blocker(num_cards=4)
+  team:
+  - 0
+  - 1
+  adversary: 2
+  rounds:
+  - 0
+  k:
+  - 0
+  - 1
+  - 2
+  s:
+  - 0
+  - 1
+  - 2
+  - inf
+  rho:
+  - priv
+  - pub
+  lower_bound: true
+  exact: true
+  time_limit: 300
+- name: blocker8
+  base_game: card_blocker(num_cards=8)
+  team:
+  - 0
+  - 1
+  adversary: 2
+  rounds:
+  - 0
+  k:
+  - 0
+  - 1
+  - 2
+  - 3
+  s:
+  - inf
+  rho:
+  - priv
+- name: kuhn3
+  base_game: kuhn_poker(players=3)
+  team:
+  - 0
+  - 1
+  adversary: 2
+  rounds:
+  - 0
+  k:
+  - 0
+  - 1
+  s:
+  - 0
+  - 1
+  - inf
+  rho:
+  - priv
+  - pub
+  lower_bound: true
+  exact_cells:
+  - - 0
+    - 0
+    - priv
+  time_limit: 1200
+hand_upper_bounds:
+- game: blocker4
+  k: 1
+  s: 0
+  rho: pub
+  upper: 0.25
+  ref: Claim 1
+- game: blocker4
+  k: 2
+  s: 0
+  rho: pub
+  upper: 0.25
+  ref: Claim 1
+- game: blocker4
+  k: 2
+  s: 1
+  rho: pub
+  upper: 0.5
+  ref: Claim 1

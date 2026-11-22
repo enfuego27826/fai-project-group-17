@@ -1,0 +1,23 @@
+experiment: m6_values
+seed: 0
+backend: auto
+simultaneous: true
+solver:
+  enum_limit: 20000
+  tol: 1.0e-09
+  pricing_time_limit: 500
+games:
+- name: suit4x4
+  base_game: suit_blocker(suits=4,ranks=4)
+  team:
+  - 0
+  - 1
+  adversary: 2
+  rounds:
+  - 0
+k:
+- 1
+s:
+- inf
+rho:
+- pub

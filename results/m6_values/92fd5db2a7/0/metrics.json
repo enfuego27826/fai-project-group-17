@@ -1,0 +1,30 @@
+[
+  {
+    "game": "blocker16",
+    "k": 2,
+    "s": "inf",
+    "rho": "priv",
+    "V": 0.23437500000000006,
+    "converged": true,
+    "V_upper_bound": 0.23437500000000006,
+    "g_of_solution": 0.234375,
+    "exploitability": 5.551115123125783e-17,
+    "V_cor_base": null,
+    "team_infosets": [
+      16,
+      17
+    ],
+    "adversary_infosets": 1,
+    "terminals": 65536,
+    "iterations": 20,
+    "columns": 20,
+    "support_size": 16,
+    "exact_pricing_calls": 1,
+    "pricing": "milp",
+    "backend": "gurobi",
+    "build_seconds": 3.1486886019993108,
+    "solve_seconds": 0.2496547959963209,
+    "master_seconds": 0.0320038150093751,
+    "pricing_seconds": 0.15403716599394102
+  }
+]

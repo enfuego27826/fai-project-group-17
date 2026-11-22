@@ -1,0 +1,36 @@
+experiment: m7_neural_diag
+seeds:
+- 0
+- 1
+- 2
+workers: 5
+iterations: 10000
+batch: 256
+lr: 0.001
+hidden: 64
+log_every: 250
+methods:
+- name: m6_baseline
+  opponent: best_response
+- name: a_entropy
+  opponent: best_response
+  entropy: 0.05
+- name: b_batch1024
+  opponent: best_response
+  batch: 1024
+- name: c_value
+  opponent: best_response
+  value_baseline: true
+- name: d_hidden256
+  opponent: best_response
+  hidden: 256
+- name: e_ppo4
+  opponent: best_response
+  ppo_epochs: 4
+cells:
+- - blocker16
+  - 4
+  - 0
+  - priv
+cell_checks: {}
+_out: results/m7_neural_diag/23d2d84bdc/seeds

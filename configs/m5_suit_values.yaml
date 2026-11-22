@@ -1,0 +1,51 @@
+# Milestone 5, task 2: exact values of the suit blocker (games/suit_blocker.py).
+# The adversary blocks a suit, so only the suit needs hiding. One round after the deal.
+# Every finite-s cell gets L and the exact bilinear solve (time limit per solve);
+# no hand bounds are used, so the Lemma (V(k, s, pub) <= 1/4 at s = 0, 1 - 2^-s at s >= 1)
+# can be checked against the solver.
+experiment: m5_suit_values
+seed: 0
+backend: auto
+simultaneous: true
+solver:
+  enum_limit: 20000
+  tol: 1.0e-9
+  pricing_time_limit: 600
+  key_pure_enum_limit: 2000000
+games:
+  - name: suit2x2
+    base_game: suit_blocker(suits=2,ranks=2)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1, 2]
+    s: [0, 1, 2, inf]
+    rho: [priv, pub]
+    lower_bound: true
+    exact: true
+    time_limit: 300
+    phi: suit_blocker
+  - name: suit2x4
+    base_game: suit_blocker(suits=2,ranks=4)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1, 2, 3]
+    s: [0, 1, 2, inf]
+    rho: [priv, pub]
+    lower_bound: true
+    exact: true
+    time_limit: 300
+    phi: suit_blocker
+  - name: suit4x2
+    base_game: suit_blocker(suits=4,ranks=2)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1, 2, 3]
+    s: [0, 1, 2, inf]
+    rho: [priv, pub]
+    lower_bound: true
+    exact: true
+    time_limit: 300
+    phi: suit_blocker

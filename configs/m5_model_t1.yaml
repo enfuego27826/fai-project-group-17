@@ -1,0 +1,42 @@
+# Milestone 5, task 3: a learned adversary that listens. Controlled comparison of the
+# training adversary, everything else fixed (PG team learner, Milestone 3 hyperparameters):
+#   exact best response | opponent model (N episodes, refit every T = 10 iterations) | REINFORCE (self-play)
+# Opponent model: every T team iterations it estimates the team's behavioral policy at every
+# team information state from the last N sampled episodes, assuming all private information
+# (cards, target, key) is revealed when an episode ends, as at a poker showdown; unvisited
+# information states are modelled as uniform. It then plays the exact best response to that
+# estimate. It never sees the team's true policy. T is fixed at 10 (chosen once, not tuned).
+# SUPPLEMENTARY: same as configs/m5_model.yaml but the model is refit every iteration (T = 1),
+# to separate staleness (T) from sample size (N). Only N = 32 and N = 2048.
+experiment: m5_model_t1
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+workers: 4               # 2 solver jobs x 2 threads were still running at launch (8-thread cap)
+exact_values_from: configs/m3_marl.yaml
+exact_values:
+  suit2x2:
+    "2,1,pub": 0.5         # exact (results/m5_suit_values, bilinear + L)
+    "2,1,priv": 0.5
+methods:
+  - {name: model_N2048_T1, trainer: pg, opponent: model, model_window: 2048, model_every: 1, iterations: 10000, batch: 256, lr: 8.0, outputs: [last]}
+  - {name: model_N32_T1, trainer: pg, opponent: model, model_window: 32, model_every: 1, iterations: 10000, batch: 256, lr: 8.0, outputs: [last]}
+games:
+  - name: attack2x2
+    base_game: coordinated_attack(rows=2,cols=2)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    cells: [[1, 2, pub], [1, 0, pub]]
+  - name: blocker4
+    base_game: card_blocker(num_cards=4)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    cells: [[1, 2, pub], [2, 2, pub]]
+  - name: suit2x2
+    base_game: suit_blocker(suits=2,ranks=2)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    ranks: 2
+    phi: suit_blocker
+    cells: [[2, 1, pub]]

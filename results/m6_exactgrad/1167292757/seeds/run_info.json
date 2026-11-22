@@ -1,0 +1,13 @@
+{
+  "commit": "69a88df32d62e7a798718c84c2ba5b20e110164f",
+  "dirty": true,
+  "python": "3.11.5",
+  "workers": 6,
+  "threads_per_worker": 1,
+  "started": "2026-11-22 10:34:42",
+  "argv": [
+    "scripts/run_m5.py",
+    "--config",
+    "configs/m6_exactgrad.yaml"
+  ]
+}

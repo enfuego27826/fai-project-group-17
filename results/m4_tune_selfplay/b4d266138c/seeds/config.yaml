@@ -1,0 +1,99 @@
+experiment: m4_tune_selfplay
+seeds:
+- 0
+- 1
+- 2
+workers: 8
+exact_values_from: configs/m3_marl.yaml
+methods:
+- name: self_play_lr0.5
+  trainer: pg
+  opponent: learning
+  lr: 0.5
+  iterations: 10000
+  batch: 256
+  outputs:
+  - last
+  - avg
+- name: self_play_lr1
+  trainer: pg
+  opponent: learning
+  lr: 1
+  iterations: 10000
+  batch: 256
+  outputs:
+  - last
+  - avg
+- name: self_play_lr2
+  trainer: pg
+  opponent: learning
+  lr: 2
+  iterations: 10000
+  batch: 256
+  outputs:
+  - last
+  - avg
+- name: self_play_lr4
+  trainer: pg
+  opponent: learning
+  lr: 4
+  iterations: 10000
+  batch: 256
+  outputs:
+  - last
+  - avg
+- name: self_play_lr8
+  trainer: pg
+  opponent: learning
+  lr: 8
+  iterations: 10000
+  batch: 256
+  outputs:
+  - last
+  - avg
+games:
+- name: blocker4
+  base_game: card_blocker(num_cards=4)
+  team:
+  - 0
+  - 1
+  adversary: 2
+  rounds:
+  - 0
+  cells:
+  - - 2
+    - 2
+    - pub
+exact_values:
+  attack2x2:
+    0,0,priv: 0.25
+    0,0,pub: 0.25
+    0,1,priv: 0.375
+    0,1,pub: 0.375
+    0,2,priv: 0.375
+    0,2,pub: 0.375
+    1,0,priv: 0.75
+    1,0,pub: 0.25
+    1,1,priv: 0.75
+    1,1,pub: 0.5
+    1,2,priv: 0.75
+    1,2,pub: 0.75
+  blocker4:
+    0,0,priv: 0.1875
+    0,0,pub: 0.1875
+    0,1,priv: 0.1875
+    0,1,pub: 0.1875
+    0,2,priv: 0.1875
+    0,2,pub: 0.1875
+    1,0,priv: 0.375
+    1,0,pub: 0.25
+    1,1,priv: 0.375
+    1,1,pub: 0.375
+    1,2,priv: 0.375
+    1,2,pub: 0.375
+    2,0,priv: 0.75
+    2,0,pub: 0.25
+    2,1,priv: 0.75
+    2,1,pub: 0.5
+    2,2,priv: 0.75
+    2,2,pub: 0.75

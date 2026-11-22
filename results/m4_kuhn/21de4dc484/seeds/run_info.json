@@ -1,0 +1,13 @@
+{
+  "commit": "939c8514a668e25da97dac00f4a6c0dad1b87b69",
+  "dirty": true,
+  "python": "3.11.5",
+  "workers": 8,
+  "threads_per_worker": 1,
+  "started": "2026-11-21 16:17:18",
+  "argv": [
+    "scripts/run_m4.py",
+    "--config",
+    "configs/m4_kuhn.yaml"
+  ]
+}

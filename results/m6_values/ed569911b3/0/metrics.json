@@ -1,0 +1,30 @@
+[
+  {
+    "game": "attack4x4",
+    "k": 2,
+    "s": "inf",
+    "rho": "pub",
+    "V": 0.9374999999999999,
+    "converged": true,
+    "V_upper_bound": 0.9374999999999999,
+    "g_of_solution": 0.9375,
+    "exploitability": -1.1102230246251565e-16,
+    "V_cor_base": null,
+    "team_infosets": [
+      68,
+      68
+    ],
+    "adversary_infosets": 16,
+    "terminals": 1048576,
+    "iterations": 127,
+    "columns": 127,
+    "support_size": 48,
+    "exact_pricing_calls": 63,
+    "pricing": "milp",
+    "backend": "gurobi",
+    "build_seconds": 54.32908505600062,
+    "solve_seconds": 117.18760414600547,
+    "master_seconds": 0.6768226260901429,
+    "pricing_seconds": 113.9309155080191
+  }
+]

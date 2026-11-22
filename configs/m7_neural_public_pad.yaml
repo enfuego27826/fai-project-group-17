@@ -1,0 +1,16 @@
+# Milestone 7, task 2 (only if the decision rule passes): the pad cell of the reduced grid, see
+# configs/m7_neural_public.yaml. Blocker (4, 4, pub) against the exact BR, 10 seeds.
+experiment: m7_neural_public_pad
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+workers: 7
+iterations: 10000
+batch: 256
+lr: 1.0e-3
+hidden: 64
+log_every: 250
+methods:
+  - {name: ppo256_exact_br, opponent: best_response, ppo_epochs: 4, hidden: 256}
+cells:
+  - [blocker16, 4, 4, pub]
+cell_checks:
+  "blocker16 4,4,pub": {check: pad}

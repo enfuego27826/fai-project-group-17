@@ -1,0 +1,182 @@
+{
+  "blocker16 2 2 pub": {
+    "game": "blocker16",
+    "k": 2,
+    "s": 2,
+    "rho": "pub",
+    "lo": 0.234375,
+    "hi": 0.234375,
+    "label": "exact (code + solver V(k,inf,priv))",
+    "code": "groups of 4, both bits padded"
+  },
+  "blocker16 2 1 pub": {
+    "game": "blocker16",
+    "k": 2,
+    "s": 1,
+    "rho": "pub",
+    "lo": 0.21875,
+    "hi": 0.234375,
+    "label": "bound (upper: solver V(k,inf,priv))",
+    "code": "groups of 4, one bit padded"
+  },
+  "blocker16 2 0 pub": {
+    "game": "blocker16",
+    "k": 2,
+    "s": 0,
+    "rho": "pub",
+    "lo": 0.1875,
+    "hi": 0.234375,
+    "label": "bound (upper: solver V(k,inf,priv))",
+    "code": "groups of 4 in clear"
+  },
+  "blocker16 4 4 pub": {
+    "game": "blocker16",
+    "k": 4,
+    "s": 4,
+    "rho": "pub",
+    "lo": 0.9375,
+    "hi": 0.9375,
+    "label": "exact (code + uniform block)",
+    "code": "card, all 4 bits padded"
+  },
+  "blocker16 4 2 pub": {
+    "game": "blocker16",
+    "k": 4,
+    "s": 2,
+    "rho": "pub",
+    "lo": 0.75,
+    "hi": 0.75,
+    "label": "exact (code + Lemma 1)",
+    "code": "card, 2 bits padded"
+  },
+  "blocker16 4 1 pub": {
+    "game": "blocker16",
+    "k": 4,
+    "s": 1,
+    "rho": "pub",
+    "lo": 0.5,
+    "hi": 0.5,
+    "label": "exact (code + Lemma 1)",
+    "code": "card, 1 bit padded"
+  },
+  "blocker16 4 0 pub": {
+    "game": "blocker16",
+    "k": 4,
+    "s": 0,
+    "rho": "pub",
+    "lo": 0.25,
+    "hi": 0.25,
+    "label": "exact (code + Lemma 1)",
+    "code": "pair in clear, guess 50/50"
+  },
+  "blocker16 4 0 priv": {
+    "game": "blocker16",
+    "k": 4,
+    "s": 0,
+    "rho": "priv",
+    "lo": 0.9375,
+    "hi": 0.9375,
+    "label": "exact (code + uniform block)",
+    "code": "card in clear"
+  },
+  "suit4x4 4 4 pub": {
+    "game": "suit4x4",
+    "k": 4,
+    "s": 4,
+    "rho": "pub",
+    "lo": 0.75,
+    "hi": 0.75,
+    "label": "exact (code + uniform block)",
+    "code": "suit padded, rank in clear"
+  },
+  "suit4x4 4 2 pub": {
+    "game": "suit4x4",
+    "k": 4,
+    "s": 2,
+    "rho": "pub",
+    "lo": 0.75,
+    "hi": 0.75,
+    "label": "exact (code + uniform block)",
+    "code": "suit padded, rank in clear"
+  },
+  "suit4x4 4 1 pub": {
+    "game": "suit4x4",
+    "k": 4,
+    "s": 1,
+    "rho": "pub",
+    "lo": 0.5,
+    "hi": 0.75,
+    "label": "bound (upper: uniform block)",
+    "code": "one suit bit padded, rank in clear"
+  },
+  "suit4x4 2 2 pub": {
+    "game": "suit4x4",
+    "k": 2,
+    "s": 2,
+    "rho": "pub",
+    "lo": 0.1875,
+    "hi": 0.1875,
+    "label": "exact (code + solver V(k,inf,priv))",
+    "code": "suit padded, no rank"
+  },
+  "suit4x4 4 0 priv": {
+    "game": "suit4x4",
+    "k": 4,
+    "s": 0,
+    "rho": "priv",
+    "lo": 0.75,
+    "hi": 0.75,
+    "label": "exact (code + uniform block)",
+    "code": "card in clear"
+  },
+  "attack4x4 2 4 pub": {
+    "game": "attack4x4",
+    "k": 2,
+    "s": 4,
+    "rho": "pub",
+    "lo": 0.9375,
+    "hi": 0.9375,
+    "label": "exact (code + uniform block)",
+    "code": "both coordinates padded"
+  },
+  "attack4x4 2 2 pub": {
+    "game": "attack4x4",
+    "k": 2,
+    "s": 2,
+    "rho": "pub",
+    "lo": 0.75,
+    "hi": 0.75,
+    "label": "exact (code + Lemma 1)",
+    "code": "one bit of each padded"
+  },
+  "attack4x4 2 1 pub": {
+    "game": "attack4x4",
+    "k": 2,
+    "s": 1,
+    "rho": "pub",
+    "lo": 0.5,
+    "hi": 0.5,
+    "label": "exact (code + Lemma 1)",
+    "code": "one bit of the row padded"
+  },
+  "attack4x4 2 0 pub": {
+    "game": "attack4x4",
+    "k": 2,
+    "s": 0,
+    "rho": "pub",
+    "lo": 0.25,
+    "hi": 0.25,
+    "label": "exact (code + Lemma 1)",
+    "code": "row in clear, half the column"
+  },
+  "attack4x4 2 0 priv": {
+    "game": "attack4x4",
+    "k": 2,
+    "s": 0,
+    "rho": "priv",
+    "lo": 0.9375,
+    "hi": 0.9375,
+    "label": "exact (code + uniform block)",
+    "code": "both coordinates in clear"
+  }
+}

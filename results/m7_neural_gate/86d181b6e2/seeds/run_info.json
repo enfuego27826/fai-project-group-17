@@ -1,0 +1,13 @@
+{
+  "commit": "abefa98cc48fb66c29d70c558c63e3d84a702fbe",
+  "dirty": true,
+  "python": "3.11.5",
+  "workers": 7,
+  "threads_per_worker": 1,
+  "started": "2026-11-22 12:52:05",
+  "argv": [
+    "scripts/run_m6.py",
+    "--config",
+    "configs/m7_neural_gate.yaml"
+  ]
+}

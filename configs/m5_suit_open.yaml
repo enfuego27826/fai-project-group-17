@@ -1,0 +1,12 @@
+# Milestone 5, task 2: longer exact (bilinear) solves on two suit-blocker cells that the 300 s
+# solves of configs/m5_suit_values.yaml left open: 2x2 (2, 0, pub) (hand value 1/4) and
+# 4x2 (3, 1, pub) (decides s* at k = 3). 900 s per cell, run one at a time with
+# FAI_THREADS=2 FAI_GUROBI_MEM_GB=2 (laptop memory cap). No L, no hand bounds.
+experiment: m5_suit_open
+seed: 0
+backend: auto
+simultaneous: true
+solver: {enum_limit: 20000, tol: 1.0e-9, pricing_time_limit: 600, key_pure_enum_limit: 2000000}
+games:
+  - {name: suit2x2, base_game: "suit_blocker(suits=2,ranks=2)", team: [0, 1], adversary: 2, rounds: [0], k: [2], s: [0], rho: [pub], exact: true, time_limit: 900, phi: suit_blocker}
+  - {name: suit4x2, base_game: "suit_blocker(suits=4,ranks=2)", team: [0, 1], adversary: 2, rounds: [0], k: [3], s: [1], rho: [pub], exact: true, time_limit: 900, phi: suit_blocker}

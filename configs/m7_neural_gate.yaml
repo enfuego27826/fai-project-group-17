@@ -1,0 +1,17 @@
+# Milestone 7, task 2, decision rule part 2. The chosen variant (PPO, 4 epochs, clip 0.2, + hidden
+# 2 x 256; configs/m7_neural_combo.yaml: 0.9375 in 2 / 3 seeds on blocker (4, 0, priv), which passes
+# part 1) on suit (4, 0, priv) and attack (2, 0, priv), 10 seeds, same budget (10,000 updates).
+# Pass if g within 0.02 of the target in at least 6 / 10 seeds on each cell.
+experiment: m7_neural_gate
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+workers: 7
+iterations: 10000
+batch: 256
+lr: 1.0e-3
+hidden: 64
+log_every: 250
+methods:
+  - {name: ppo_hidden256, opponent: best_response, ppo_epochs: 4, hidden: 256}
+cells:
+  - [suit4x4, 4, 0, priv]
+  - [attack4x4, 2, 0, priv]

@@ -1,0 +1,13 @@
+{
+  "commit": "352c3813aafbc7858a8455b40ea8decec106b71a",
+  "dirty": true,
+  "python": "3.11.5",
+  "workers": 8,
+  "threads_per_worker": 1,
+  "started": "2026-11-21 17:54:59",
+  "argv": [
+    "scripts/run_m5.py",
+    "--config",
+    "configs/m5_dose.yaml"
+  ]
+}

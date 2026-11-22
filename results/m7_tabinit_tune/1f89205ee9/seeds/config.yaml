@@ -1,0 +1,31 @@
+experiment: m7_tabinit_tune
+seeds:
+- 100
+- 101
+- 102
+workers: 3
+iterations: 10000
+batch: 256
+lr: 8.0
+hidden: 64
+log_every: 250
+methods:
+- name: sigma0.5
+  opponent: best_response
+  policy: tabular
+  init_scale: 0.5
+- name: sigma1
+  opponent: best_response
+  policy: tabular
+  init_scale: 1.0
+- name: sigma2
+  opponent: best_response
+  policy: tabular
+  init_scale: 2.0
+cells:
+- - blocker16
+  - 4
+  - 0
+  - priv
+cell_checks: {}
+_out: results/m7_tabinit_tune/1f89205ee9/seeds

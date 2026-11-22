@@ -1,0 +1,471 @@
+pg_vs_br/avg     s=0 seed 0  g=-0.0334
+    teammate 0 key -: bit for J,Q,K,A = 0?01  -> mixed
+    teammate 1 key -: bit for J,Q,K,A = 0100  -> I hold the Q
+pg_vs_br/avg     s=0 seed 1  g=-0.0259
+    teammate 0 key -: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key -: bit for J,Q,K,A = 1010  -> {J,K} vs rest
+pg_vs_br/avg     s=0 seed 2  g=-0.0616
+    teammate 0 key -: bit for J,Q,K,A = 1?11  -> mixed
+    teammate 1 key -: bit for J,Q,K,A = 1110  -> I hold the A
+pg_vs_br/avg     s=0 seed 3  g=-0.0189
+    teammate 0 key -: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 1 key -: bit for J,Q,K,A = 0111  -> I hold the J
+pg_vs_br/avg     s=0 seed 4  g=-0.0135
+    teammate 0 key -: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 1 key -: bit for J,Q,K,A = 0111  -> I hold the J
+pg_vs_br/avg     s=1 seed 0  g=-0.0182
+    teammate 0 key 0: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 0 key 1: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 0: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 1: bit for J,Q,K,A = 0100  -> I hold the Q
+pg_vs_br/avg     s=1 seed 1  g=-0.0487
+    teammate 0 key 0: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 0 key 1: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key 0: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key 1: bit for J,Q,K,A = 0?00  -> mixed
+pg_vs_br/avg     s=1 seed 2  g=-0.0289
+    teammate 0 key 0: bit for J,Q,K,A = 1011  -> I hold the Q
+    teammate 0 key 1: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 0: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 1 key 1: bit for J,Q,K,A = 0111  -> I hold the J
+pg_vs_br/avg     s=1 seed 3  g=-0.0359
+    teammate 0 key 0: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 1: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 1 key 0: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 1 key 1: bit for J,Q,K,A = 0111  -> I hold the J
+pg_vs_br/avg     s=1 seed 4  g=-0.0317
+    teammate 0 key 0: bit for J,Q,K,A = 1101  -> I hold the K
+    teammate 0 key 1: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 1 key 0: bit for J,Q,K,A = 0001  -> I hold the A
+    teammate 1 key 1: bit for J,Q,K,A = 0000  -> constant (no information)
+pg_vs_br/avg     s=2 seed 0  g=-0.0381
+    teammate 0 key 00: bit for J,Q,K,A = 1101  -> I hold the K
+    teammate 0 key 01: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 0 key 10: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 11: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 1 key 00: bit for J,Q,K,A = 0111  -> I hold the J
+    teammate 1 key 01: bit for J,Q,K,A = ?001  -> mixed
+    teammate 1 key 10: bit for J,Q,K,A = 0110  -> {J,A} vs rest
+    teammate 1 key 11: bit for J,Q,K,A = 00?1  -> mixed
+pg_vs_br/avg     s=2 seed 1  g=-0.0315
+    teammate 0 key 00: bit for J,Q,K,A = 0010  -> I hold the K
+    teammate 0 key 01: bit for J,Q,K,A = 1110  -> I hold the A
+    teammate 0 key 10: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 11: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 00: bit for J,Q,K,A = 1011  -> I hold the Q
+    teammate 1 key 01: bit for J,Q,K,A = 111?  -> mixed
+    teammate 1 key 10: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 11: bit for J,Q,K,A = 1001  -> {J,A} vs rest
+pg_vs_br/avg     s=2 seed 2  g=-0.0369
+    teammate 0 key 00: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 01: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 0 key 10: bit for J,Q,K,A = 11?1  -> mixed
+    teammate 0 key 11: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 1 key 00: bit for J,Q,K,A = 0010  -> I hold the K
+    teammate 1 key 01: bit for J,Q,K,A = 0111  -> I hold the J
+    teammate 1 key 10: bit for J,Q,K,A = ?000  -> mixed
+    teammate 1 key 11: bit for J,Q,K,A = 1111  -> constant (no information)
+pg_vs_br/avg     s=2 seed 3  g=-0.0421
+    teammate 0 key 00: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 01: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 0 key 10: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 11: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 1 key 00: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key 01: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 1 key 10: bit for J,Q,K,A = 0111  -> I hold the J
+    teammate 1 key 11: bit for J,Q,K,A = 1011  -> I hold the Q
+pg_vs_br/avg     s=2 seed 4  g=-0.0333
+    teammate 0 key 00: bit for J,Q,K,A = 1001  -> {J,A} vs rest
+    teammate 0 key 01: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 0 key 10: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 11: bit for J,Q,K,A = 0001  -> I hold the A
+    teammate 1 key 00: bit for J,Q,K,A = 1011  -> I hold the Q
+    teammate 1 key 01: bit for J,Q,K,A = 11?0  -> mixed
+    teammate 1 key 10: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 1 key 11: bit for J,Q,K,A = 0110  -> {J,A} vs rest
+pg_vs_br/last    s=0 seed 0  g=-0.0393
+    teammate 0 key -: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key -: bit for J,Q,K,A = 0100  -> I hold the Q
+pg_vs_br/last    s=0 seed 1  g=-0.0391
+    teammate 0 key -: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key -: bit for J,Q,K,A = 1010  -> {J,K} vs rest
+pg_vs_br/last    s=0 seed 2  g=-0.0937
+    teammate 0 key -: bit for J,Q,K,A = 1?11  -> mixed
+    teammate 1 key -: bit for J,Q,K,A = 1110  -> I hold the A
+pg_vs_br/last    s=0 seed 3  g=-0.0171
+    teammate 0 key -: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 1 key -: bit for J,Q,K,A = 0111  -> I hold the J
+pg_vs_br/last    s=0 seed 4  g=-0.0238
+    teammate 0 key -: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 1 key -: bit for J,Q,K,A = 0111  -> I hold the J
+pg_vs_br/last    s=1 seed 0  g=-0.0152
+    teammate 0 key 0: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 0 key 1: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 0: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 1: bit for J,Q,K,A = 0100  -> I hold the Q
+pg_vs_br/last    s=1 seed 1  g=-0.0415
+    teammate 0 key 0: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 0 key 1: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key 0: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key 1: bit for J,Q,K,A = 0100  -> I hold the Q
+pg_vs_br/last    s=1 seed 2  g=-0.0298
+    teammate 0 key 0: bit for J,Q,K,A = 1011  -> I hold the Q
+    teammate 0 key 1: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 0: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 1 key 1: bit for J,Q,K,A = 0111  -> I hold the J
+pg_vs_br/last    s=1 seed 3  g=-0.0399
+    teammate 0 key 0: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 1: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 1 key 0: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 1 key 1: bit for J,Q,K,A = 0111  -> I hold the J
+pg_vs_br/last    s=1 seed 4  g=-0.0323
+    teammate 0 key 0: bit for J,Q,K,A = 1101  -> I hold the K
+    teammate 0 key 1: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 1 key 0: bit for J,Q,K,A = 0001  -> I hold the A
+    teammate 1 key 1: bit for J,Q,K,A = 0000  -> constant (no information)
+pg_vs_br/last    s=2 seed 0  g=-0.0335
+    teammate 0 key 00: bit for J,Q,K,A = 1101  -> I hold the K
+    teammate 0 key 01: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 0 key 10: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 11: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 1 key 00: bit for J,Q,K,A = 0111  -> I hold the J
+    teammate 1 key 01: bit for J,Q,K,A = 1001  -> {J,A} vs rest
+    teammate 1 key 10: bit for J,Q,K,A = 0110  -> {J,A} vs rest
+    teammate 1 key 11: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+pg_vs_br/last    s=2 seed 1  g=-0.0320
+    teammate 0 key 00: bit for J,Q,K,A = 0010  -> I hold the K
+    teammate 0 key 01: bit for J,Q,K,A = 1110  -> I hold the A
+    teammate 0 key 10: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 11: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 00: bit for J,Q,K,A = 1011  -> I hold the Q
+    teammate 1 key 01: bit for J,Q,K,A = 1110  -> I hold the A
+    teammate 1 key 10: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 11: bit for J,Q,K,A = 1001  -> {J,A} vs rest
+pg_vs_br/last    s=2 seed 2  g=-0.0301
+    teammate 0 key 00: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 01: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 0 key 10: bit for J,Q,K,A = 1101  -> I hold the K
+    teammate 0 key 11: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 1 key 00: bit for J,Q,K,A = 0010  -> I hold the K
+    teammate 1 key 01: bit for J,Q,K,A = 0111  -> I hold the J
+    teammate 1 key 10: bit for J,Q,K,A = ?000  -> mixed
+    teammate 1 key 11: bit for J,Q,K,A = 1111  -> constant (no information)
+pg_vs_br/last    s=2 seed 3  g=-0.0393
+    teammate 0 key 00: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 01: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 0 key 10: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 11: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 1 key 00: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key 01: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 1 key 10: bit for J,Q,K,A = 0111  -> I hold the J
+    teammate 1 key 11: bit for J,Q,K,A = 1011  -> I hold the Q
+pg_vs_br/last    s=2 seed 4  g=-0.0303
+    teammate 0 key 00: bit for J,Q,K,A = 1001  -> {J,A} vs rest
+    teammate 0 key 01: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 0 key 10: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 11: bit for J,Q,K,A = 0001  -> I hold the A
+    teammate 1 key 00: bit for J,Q,K,A = 1011  -> I hold the Q
+    teammate 1 key 01: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 1 key 10: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 1 key 11: bit for J,Q,K,A = 0110  -> {J,A} vs rest
+psro/single      s=0 seed 0  g=-0.1669
+    teammate 0 key -: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 1 key -: bit for J,Q,K,A = 1111  -> constant (no information)
+psro/single      s=0 seed 1  g=-0.1628
+    teammate 0 key -: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 1 key -: bit for J,Q,K,A = 1000  -> I hold the J
+psro/single      s=0 seed 2  g=-0.1668
+    teammate 0 key -: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key -: bit for J,Q,K,A = 1111  -> constant (no information)
+psro/single      s=0 seed 3  g=-0.0736
+    teammate 0 key -: bit for J,Q,K,A = 0001  -> I hold the A
+    teammate 1 key -: bit for J,Q,K,A = 0001  -> I hold the A
+psro/single      s=0 seed 4  g=-0.2049
+    teammate 0 key -: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 1 key -: bit for J,Q,K,A = 1001  -> {J,A} vs rest
+psro/single      s=1 seed 0  g=-0.0788
+    teammate 0 key 0: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 1: bit for J,Q,K,A = 1001  -> {J,A} vs rest
+    teammate 1 key 0: bit for J,Q,K,A = 1011  -> I hold the Q
+    teammate 1 key 1: bit for J,Q,K,A = 0000  -> constant (no information)
+psro/single      s=1 seed 1  g=-0.1230
+    teammate 0 key 0: bit for J,Q,K,A = 1110  -> I hold the A
+    teammate 0 key 1: bit for J,Q,K,A = 0111  -> I hold the J
+    teammate 1 key 0: bit for J,Q,K,A = 0010  -> I hold the K
+    teammate 1 key 1: bit for J,Q,K,A = 1111  -> constant (no information)
+psro/single      s=1 seed 2  g=-0.2522
+    teammate 0 key 0: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 1: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 1 key 0: bit for J,Q,K,A = 0110  -> {J,A} vs rest
+    teammate 1 key 1: bit for J,Q,K,A = 1001  -> {J,A} vs rest
+psro/single      s=1 seed 3  g=-0.1395
+    teammate 0 key 0: bit for J,Q,K,A = 1001  -> {J,A} vs rest
+    teammate 0 key 1: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 0: bit for J,Q,K,A = 1110  -> I hold the A
+    teammate 1 key 1: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+psro/single      s=1 seed 4  g=-0.1230
+    teammate 0 key 0: bit for J,Q,K,A = 1001  -> {J,A} vs rest
+    teammate 0 key 1: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 1 key 0: bit for J,Q,K,A = 0111  -> I hold the J
+    teammate 1 key 1: bit for J,Q,K,A = 1110  -> I hold the A
+psro/single      s=2 seed 0  g=-0.1621
+    teammate 0 key 00: bit for J,Q,K,A = 1011  -> I hold the Q
+    teammate 0 key 01: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 10: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 0 key 11: bit for J,Q,K,A = 1101  -> I hold the K
+    teammate 1 key 00: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 01: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 1 key 10: bit for J,Q,K,A = 0010  -> I hold the K
+    teammate 1 key 11: bit for J,Q,K,A = 1110  -> I hold the A
+psro/single      s=2 seed 1  g=-0.1426
+    teammate 0 key 00: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 0 key 01: bit for J,Q,K,A = 0010  -> I hold the K
+    teammate 0 key 10: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 0 key 11: bit for J,Q,K,A = 0010  -> I hold the K
+    teammate 1 key 00: bit for J,Q,K,A = 0111  -> I hold the J
+    teammate 1 key 01: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 1 key 10: bit for J,Q,K,A = 1011  -> I hold the Q
+    teammate 1 key 11: bit for J,Q,K,A = 1101  -> I hold the K
+psro/single      s=2 seed 2  g=-0.0688
+    teammate 0 key 00: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 01: bit for J,Q,K,A = 0001  -> I hold the A
+    teammate 0 key 10: bit for J,Q,K,A = 1101  -> I hold the K
+    teammate 0 key 11: bit for J,Q,K,A = 1001  -> {J,A} vs rest
+    teammate 1 key 00: bit for J,Q,K,A = 1001  -> {J,A} vs rest
+    teammate 1 key 01: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 10: bit for J,Q,K,A = 1110  -> I hold the A
+    teammate 1 key 11: bit for J,Q,K,A = 1011  -> I hold the Q
+psro/single      s=2 seed 3  g=-0.1072
+    teammate 0 key 00: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 01: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 0 key 10: bit for J,Q,K,A = 1001  -> {J,A} vs rest
+    teammate 0 key 11: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 1 key 00: bit for J,Q,K,A = 1101  -> I hold the K
+    teammate 1 key 01: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 1 key 10: bit for J,Q,K,A = 1110  -> I hold the A
+    teammate 1 key 11: bit for J,Q,K,A = 1111  -> constant (no information)
+psro/single      s=2 seed 4  g=-0.1147
+    teammate 0 key 00: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 01: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 0 key 10: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 0 key 11: bit for J,Q,K,A = 1001  -> {J,A} vs rest
+    teammate 1 key 00: bit for J,Q,K,A = 011?  -> mixed
+    teammate 1 key 01: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 1 key 10: bit for J,Q,K,A = 000?  -> mixed
+    teammate 1 key 11: bit for J,Q,K,A = 010?  -> mixed
+self_play/avg    s=0 seed 0  g=-0.1381
+    teammate 0 key -: bit for J,Q,K,A = 0001  -> I hold the A
+    teammate 1 key -: bit for J,Q,K,A = 0000  -> constant (no information)
+self_play/avg    s=0 seed 1  g=-0.0875
+    teammate 0 key -: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key -: bit for J,Q,K,A = 1110  -> I hold the A
+self_play/avg    s=0 seed 2  g=-0.0625
+    teammate 0 key -: bit for J,Q,K,A = 1?00  -> mixed
+    teammate 1 key -: bit for J,Q,K,A = 1?00  -> mixed
+self_play/avg    s=0 seed 3  g=-0.0989
+    teammate 0 key -: bit for J,Q,K,A = 1??0  -> mixed
+    teammate 1 key -: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+self_play/avg    s=0 seed 4  g=-0.0948
+    teammate 0 key -: bit for J,Q,K,A = 01?1  -> mixed
+    teammate 1 key -: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+self_play/avg    s=1 seed 0  g=-0.0595
+    teammate 0 key 0: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 0 key 1: bit for J,Q,K,A = 00?1  -> mixed
+    teammate 1 key 0: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 1 key 1: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+self_play/avg    s=1 seed 1  g=-0.0818
+    teammate 0 key 0: bit for J,Q,K,A = 0110  -> {J,A} vs rest
+    teammate 0 key 1: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 1 key 0: bit for J,Q,K,A = 0?00  -> mixed
+    teammate 1 key 1: bit for J,Q,K,A = 1010  -> {J,K} vs rest
+self_play/avg    s=1 seed 2  g=-0.0815
+    teammate 0 key 0: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 1: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 1 key 0: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 1: bit for J,Q,K,A = 01?1  -> mixed
+self_play/avg    s=1 seed 3  g=-0.0529
+    teammate 0 key 0: bit for J,Q,K,A = 1011  -> I hold the Q
+    teammate 0 key 1: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 1 key 0: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 1 key 1: bit for J,Q,K,A = 110?  -> mixed
+self_play/avg    s=1 seed 4  g=-0.0413
+    teammate 0 key 0: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 0 key 1: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key 0: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 1 key 1: bit for J,Q,K,A = 1101  -> I hold the K
+self_play/avg    s=2 seed 0  g=-0.0513
+    teammate 0 key 00: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 01: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 0 key 10: bit for J,Q,K,A = 11?0  -> mixed
+    teammate 0 key 11: bit for J,Q,K,A = 1010  -> {J,K} vs rest
+    teammate 1 key 00: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 1 key 01: bit for J,Q,K,A = 1101  -> I hold the K
+    teammate 1 key 10: bit for J,Q,K,A = 0110  -> {J,A} vs rest
+    teammate 1 key 11: bit for J,Q,K,A = 0?11  -> mixed
+self_play/avg    s=2 seed 1  g=-0.0318
+    teammate 0 key 00: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 0 key 01: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 0 key 10: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 11: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 1 key 00: bit for J,Q,K,A = 0111  -> I hold the J
+    teammate 1 key 01: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 1 key 10: bit for J,Q,K,A = 0010  -> I hold the K
+    teammate 1 key 11: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+self_play/avg    s=2 seed 2  g=-0.0840
+    teammate 0 key 00: bit for J,Q,K,A = ?111  -> mixed
+    teammate 0 key 01: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 10: bit for J,Q,K,A = 1011  -> I hold the Q
+    teammate 0 key 11: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key 00: bit for J,Q,K,A = 0111  -> I hold the J
+    teammate 1 key 01: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key 10: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 11: bit for J,Q,K,A = 1111  -> constant (no information)
+self_play/avg    s=2 seed 3  g=-0.0632
+    teammate 0 key 00: bit for J,Q,K,A = 1?11  -> mixed
+    teammate 0 key 01: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 10: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 0 key 11: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 1 key 00: bit for J,Q,K,A = 1101  -> I hold the K
+    teammate 1 key 01: bit for J,Q,K,A = 0001  -> I hold the A
+    teammate 1 key 10: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 1 key 11: bit for J,Q,K,A = 1111  -> constant (no information)
+self_play/avg    s=2 seed 4  g=-0.0492
+    teammate 0 key 00: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 0 key 01: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 10: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 11: bit for J,Q,K,A = 0?01  -> mixed
+    teammate 1 key 00: bit for J,Q,K,A = ?001  -> mixed
+    teammate 1 key 01: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 1 key 10: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 1 key 11: bit for J,Q,K,A = 0000  -> constant (no information)
+self_play/last   s=0 seed 0  g=-0.2916
+    teammate 0 key -: bit for J,Q,K,A = 0001  -> I hold the A
+    teammate 1 key -: bit for J,Q,K,A = 0000  -> constant (no information)
+self_play/last   s=0 seed 1  g=-0.0847
+    teammate 0 key -: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key -: bit for J,Q,K,A = 1110  -> I hold the A
+self_play/last   s=0 seed 2  g=-0.1768
+    teammate 0 key -: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 1 key -: bit for J,Q,K,A = 1000  -> I hold the J
+self_play/last   s=0 seed 3  g=-0.1655
+    teammate 0 key -: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 1 key -: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+self_play/last   s=0 seed 4  g=-0.3727
+    teammate 0 key -: bit for J,Q,K,A = 0111  -> I hold the J
+    teammate 1 key -: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+self_play/last   s=1 seed 0  g=-0.0833
+    teammate 0 key 0: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 0 key 1: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 0: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 1 key 1: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+self_play/last   s=1 seed 1  g=-0.1068
+    teammate 0 key 0: bit for J,Q,K,A = 0110  -> {J,A} vs rest
+    teammate 0 key 1: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 1 key 0: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 1 key 1: bit for J,Q,K,A = 1010  -> {J,K} vs rest
+self_play/last   s=1 seed 2  g=-0.2557
+    teammate 0 key 0: bit for J,Q,K,A = 1011  -> I hold the Q
+    teammate 0 key 1: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 1 key 0: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 1: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+self_play/last   s=1 seed 3  g=-0.0864
+    teammate 0 key 0: bit for J,Q,K,A = 1011  -> I hold the Q
+    teammate 0 key 1: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 1 key 0: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 1 key 1: bit for J,Q,K,A = 1101  -> I hold the K
+self_play/last   s=1 seed 4  g=-0.1024
+    teammate 0 key 0: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 0 key 1: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key 0: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 1 key 1: bit for J,Q,K,A = 1101  -> I hold the K
+self_play/last   s=2 seed 0  g=-0.1050
+    teammate 0 key 00: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 01: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 0 key 10: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 11: bit for J,Q,K,A = 1010  -> {J,K} vs rest
+    teammate 1 key 00: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 1 key 01: bit for J,Q,K,A = 1101  -> I hold the K
+    teammate 1 key 10: bit for J,Q,K,A = 0110  -> {J,A} vs rest
+    teammate 1 key 11: bit for J,Q,K,A = 0111  -> I hold the J
+self_play/last   s=2 seed 1  g=-0.0832
+    teammate 0 key 00: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 0 key 01: bit for J,Q,K,A = 1000  -> I hold the J
+    teammate 0 key 10: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 11: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 1 key 00: bit for J,Q,K,A = 0111  -> I hold the J
+    teammate 1 key 01: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 1 key 10: bit for J,Q,K,A = 0010  -> I hold the K
+    teammate 1 key 11: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+self_play/last   s=2 seed 2  g=-0.1985
+    teammate 0 key 00: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 01: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 10: bit for J,Q,K,A = 1011  -> I hold the Q
+    teammate 0 key 11: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key 00: bit for J,Q,K,A = 0111  -> I hold the J
+    teammate 1 key 01: bit for J,Q,K,A = 0101  -> {J,K} vs rest
+    teammate 1 key 10: bit for J,Q,K,A = 0011  -> high/low (J,Q | K,A)
+    teammate 1 key 11: bit for J,Q,K,A = 1111  -> constant (no information)
+self_play/last   s=2 seed 3  g=-0.1036
+    teammate 0 key 00: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 0 key 01: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 10: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 0 key 11: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 1 key 00: bit for J,Q,K,A = 1101  -> I hold the K
+    teammate 1 key 01: bit for J,Q,K,A = 0001  -> I hold the A
+    teammate 1 key 10: bit for J,Q,K,A = 1111  -> constant (no information)
+    teammate 1 key 11: bit for J,Q,K,A = 1111  -> constant (no information)
+self_play/last   s=2 seed 4  g=-0.1036
+    teammate 0 key 00: bit for J,Q,K,A = 0100  -> I hold the Q
+    teammate 0 key 01: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 10: bit for J,Q,K,A = 1100  -> high/low (J,Q | K,A)
+    teammate 0 key 11: bit for J,Q,K,A = 0001  -> I hold the A
+    teammate 1 key 00: bit for J,Q,K,A = 1001  -> {J,A} vs rest
+    teammate 1 key 01: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 1 key 10: bit for J,Q,K,A = 0000  -> constant (no information)
+    teammate 1 key 11: bit for J,Q,K,A = 0000  -> constant (no information)
+
+codes used by all k = 1 runs (counted per teammate and key value):
+  pg_vs_br/avg     I hold the A                   4
+  pg_vs_br/avg     I hold the J                   10
+  pg_vs_br/avg     I hold the K                   4
+  pg_vs_br/avg     I hold the Q                   11
+  pg_vs_br/avg     constant (no information)      11
+  pg_vs_br/avg     high/low (J,Q | K,A)           10
+  pg_vs_br/avg     mixed                          9
+  pg_vs_br/avg     {J,A} vs rest                  4
+  pg_vs_br/avg     {J,K} vs rest                  7
+  pg_vs_br/last    I hold the A                   5
+  pg_vs_br/last    I hold the J                   10
+  pg_vs_br/last    I hold the K                   5
+  pg_vs_br/last    I hold the Q                   12
+  pg_vs_br/last    constant (no information)      11
+  pg_vs_br/last    high/low (J,Q | K,A)           12
+  pg_vs_br/last    mixed                          2
+  pg_vs_br/last    {J,A} vs rest                  5
+  pg_vs_br/last    {J,K} vs rest                  8
+  psro/single      I hold the A                   9
+  psro/single      I hold the J                   9
+  psro/single      I hold the K                   8
+  psro/single      I hold the Q                   8
+  psro/single      constant (no information)      12
+  psro/single      high/low (J,Q | K,A)           10
+  psro/single      mixed                          3
+  psro/single      {J,A} vs rest                  10
+  psro/single      {J,K} vs rest                  1
+  self_play/avg    I hold the A                   3
+  self_play/avg    I hold the J                   6
+  self_play/avg    I hold the K                   4
+  self_play/avg    I hold the Q                   6
+  self_play/avg    constant (no information)      16
+  self_play/avg    high/low (J,Q | K,A)           13
+  self_play/avg    mixed                          14
+  self_play/avg    {J,A} vs rest                  2
+  self_play/avg    {J,K} vs rest                  6
+  self_play/last   I hold the A                   4
+  self_play/last   I hold the J                   10
+  self_play/last   I hold the K                   5
+  self_play/last   I hold the Q                   8
+  self_play/last   constant (no information)      17
+  self_play/last   high/low (J,Q | K,A)           16
+  self_play/last   {J,A} vs rest                  3
+  self_play/last   {J,K} vs rest                  7

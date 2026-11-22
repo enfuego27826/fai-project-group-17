@@ -1,0 +1,20 @@
+# Milestone 6, task 3: the one learning-rate tuning run. One cell (blocker n = 16, k = 4, s = 4,
+# public: the largest message space, pad needed), exact best response, Adam lr in
+# {1e-3, 3e-3, 1e-2}, 3 tuning seeds (100 to 102, disjoint from the main seeds). Pick the lr with
+# the highest mean g(pi_T) and fix it for every cell and adversary of configs/m6_neural.yaml.
+experiment: m6_neural_tune
+seeds: [100, 101, 102]
+workers: 6               # + one 2-thread solver job = 8 threads
+iterations: 10000
+batch: 256
+lr: 3.0e-3
+hidden: 64
+log_every: 250
+methods:
+  - {name: lr1e-3, opponent: best_response, lr: 1.0e-3}
+  - {name: lr3e-3, opponent: best_response, lr: 3.0e-3}
+  - {name: lr1e-2, opponent: best_response, lr: 1.0e-2}
+cells:
+  - [blocker16, 4, 4, pub]
+cell_checks:
+  "blocker16 4,4,pub": {check: pad}

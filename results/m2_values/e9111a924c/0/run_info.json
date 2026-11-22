@@ -1,0 +1,16 @@
+{
+  "commit": "df607519c16c900567b654ed9c92a9df575a697d",
+  "dirty": true,
+  "python": "3.11.5",
+  "open_spiel": "2.0.2",
+  "backend": "gurobi",
+  "threads": 2,
+  "started": "2026-10-31 23:00:33",
+  "argv": [
+    "scripts/run_bounds.py",
+    "--config",
+    "configs/m2_values.yaml",
+    "--seed",
+    "0"
+  ]
+}

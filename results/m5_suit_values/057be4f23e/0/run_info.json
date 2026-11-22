@@ -1,0 +1,16 @@
+{
+  "commit": "a56e6ecf513fdcabdbae9a79abfe509e4d1f48da",
+  "dirty": true,
+  "python": "3.11.5",
+  "open_spiel": "2.0.2",
+  "backend": "gurobi",
+  "threads": 2,
+  "started": "2026-11-21 17:58:46",
+  "argv": [
+    "scripts/run_bounds.py",
+    "--config",
+    "configs/m5_suit_values.yaml",
+    "--games",
+    "suit2x2"
+  ]
+}

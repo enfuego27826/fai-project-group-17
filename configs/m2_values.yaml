@@ -1,0 +1,47 @@
+# Milestone 2: values and bounds of V(k, s, rho) with finite keys, on the blocker game and Kuhn.
+experiment: m2_values
+seed: 0
+backend: auto              # gurobi if a licence starts, else highs (the exact finite-s solver needs gurobi)
+simultaneous: true         # teammate 1 does not see m_0 before sending m_1
+solver:
+  enum_limit: 20000        # TMECor pricing: enumerate one teammate's plans if at most this many
+  tol: 1.0e-9
+  pricing_time_limit: 1200 # seconds per exact TMECor pricing call
+  key_pure_enum_limit: 2000000  # L: enumerate joint pure plans if at most this many pairs, else MILP
+games:
+  - name: blocker4
+    base_game: card_blocker(num_cards=4)   # guesser does not see the block (default)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1, 2]
+    s: [0, 1, 2, inf]
+    rho: [priv, pub]
+    lower_bound: true      # L(k, s, rho), key-indexed joint pure plans
+    exact: true            # exact V(k, s, rho) by global bilinear optimization
+    time_limit: 300        # seconds per finite-s solve; the cells that hit it are closed by Claim 1
+  - name: blocker8
+    base_game: card_blocker(num_cards=8)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1, 2, 3]
+    s: [inf]
+    rho: [priv]
+  - name: kuhn3
+    base_game: kuhn_poker(players=3)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    k: [0, 1]
+    s: [0, 1, inf]
+    rho: [priv, pub]       # s = inf pub only as the upper bound U for pub (equals priv by Prop. 2)
+    lower_bound: true
+    exact_cells: [[0, 0, priv]]   # V(0, 0) = V_TME; the bilinear solve is time-boxed
+    time_limit: 1200
+# Upper bounds proved by hand (Claim 1, implied by Lemma 1 of report/main.tex: V(k, s, pub) <= 2^s / 4 on the
+# blocker game, any n and k). Used like a theorem.
+hand_upper_bounds:
+  - {game: blocker4, k: 1, s: 0, rho: pub, upper: 0.25, ref: "Claim 1"}
+  - {game: blocker4, k: 2, s: 0, rho: pub, upper: 0.25, ref: "Claim 1"}
+  - {game: blocker4, k: 2, s: 1, rho: pub, upper: 0.5, ref: "Claim 1"}

@@ -1,0 +1,24 @@
+# Milestone 7, task 2 (only if the decision rule passes, configs/m7_neural_gate.yaml): the fixed
+# neural learner (PPO 4 epochs, clip 0.2, hidden 2 x 256, Adam lr 1e-3, batch 256, 10,000 updates)
+# on Milestone 6 task 3 public cells. A run takes 12 to 19 minutes, so the 450-run grid of
+# Milestone 6 (about 16 hours on 7 workers) does not fit in the 4-hour stop. Reduced grid, chosen
+# before seeing any public result: suit (4, 2, pub) against all three adversaries (suit pad and
+# adversary effect) and blocker (4, 4, pub) against the exact BR (pad), 10 seeds each.
+# Adversaries as in Milestone 6: exact BR; team model refit every iteration from 2048 episodes;
+# REINFORCE MLP adversary at Task 1's best timescale (step x1, 4 updates), width 2 x 64 as in M6.
+experiment: m7_neural_public
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+workers: 7
+iterations: 10000
+batch: 256
+lr: 1.0e-3
+hidden: 64
+log_every: 250
+methods:
+  - {name: ppo256_exact_br, opponent: best_response, ppo_epochs: 4, hidden: 256}
+  - {name: ppo256_model_N2048, opponent: model, model_window: 2048, ppo_epochs: 4, hidden: 256}
+  - {name: ppo256_reinforce_adv, opponent: learning, adv_lr_mult: 1, adv_steps: 4, ppo_epochs: 4, hidden: 256, adv_hidden: 64}
+cells:
+  - [suit4x4, 4, 2, pub]
+cell_checks:
+  "suit4x4 4,2,pub": {check: suit pad}

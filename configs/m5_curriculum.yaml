@@ -1,0 +1,26 @@
+# Milestone 5, task 4: curriculum. Warm start = train 10,000 iterations on the private channel of
+# the same cell, then switch to the public channel and train 10,000 more from those logits.
+# Controls: from scratch with 10,000 iterations (= Milestone 3/4 PG vs BR, bit for bit) and
+# from scratch with 20,000 iterations (same total compute as the warm start).
+# PG vs exact BR, Milestone 3 hyperparameters, no tuning.
+experiment: m5_curriculum
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+workers: 6               # one 2-thread solver job was still running at launch (8-thread cap)
+exact_values_from: configs/m3_marl.yaml
+methods:
+  - {name: warm_priv, trainer: pg, opponent: best_response, warm_start: priv, iterations: 10000, batch: 256, lr: 8.0, outputs: [last, avg]}
+  - {name: scratch10k, trainer: pg, opponent: best_response, iterations: 10000, batch: 256, lr: 8.0, outputs: [last, avg]}
+  - {name: scratch20k, trainer: pg, opponent: best_response, iterations: 20000, batch: 256, lr: 8.0, outputs: [last, avg]}
+games:
+  - name: blocker4
+    base_game: card_blocker(num_cards=4)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    cells: [[1, 0, pub], [2, 0, pub], [2, 1, pub]]
+  - name: attack2x2
+    base_game: coordinated_attack(rows=2,cols=2)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    cells: [[1, 1, pub]]

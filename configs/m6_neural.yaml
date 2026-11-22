@@ -1,0 +1,50 @@
+# Milestone 6, task 3: neural team policies (one MLP per teammate, 2 x 64 tanh, REINFORCE with
+# batch-mean baseline, Adam) on larger games. Targets and labels: scripts/m6_targets.py.
+# Same hyperparameters for every cell and adversary; lr from configs/m6_neural_tune.yaml (one
+# cell, configs/m6_neural_tune.yaml). Adversaries:
+#   exact_br      exact best response every iteration
+#   model_N2048   opponent model refit every iteration from the last 2048 episodes (showdown
+#                 reveal; unvisited states uniform), exact BR to the model
+#   reinforce_adv MLP adversary trained by REINFORCE, Task 1's best timescale (step x1, 4 updates
+#                 per team update)
+# Control (added after the neural team pooled even on private cells): tabular_br = tabular softmax
+# per information state, plain SGD lr 8, vs exact BR (the Milestone 3 learner on the same cells).
+experiment: m6_neural
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+workers: 6
+iterations: 10000
+batch: 256
+lr: 1.0e-3               # from configs/m6_neural_tune.yaml (mean g 0.116 vs 0.088 at 3e-3, 0.094 at 1e-2)
+hidden: 64
+log_every: 250
+methods:
+  - {name: exact_br, opponent: best_response}
+  - {name: model_N2048, opponent: model, model_window: 2048}
+  - {name: reinforce_adv, opponent: learning, adv_lr_mult: 1, adv_steps: 4}
+  - {name: tabular_br, opponent: best_response, policy: tabular, lr: 8.0}   # control (M3 learner)
+cells:
+  - [blocker16, 2, 2, pub]
+  - [blocker16, 2, 1, pub]
+  - [blocker16, 2, 0, pub]
+  - [blocker16, 4, 4, pub]
+  - [blocker16, 4, 2, pub]
+  - [blocker16, 4, 1, pub]
+  - [blocker16, 4, 0, pub]
+  - [blocker16, 4, 0, priv]
+  - [suit4x4, 4, 4, pub]
+  - [suit4x4, 4, 2, pub]
+  - [suit4x4, 4, 1, pub]
+  - [suit4x4, 2, 2, pub]
+  - [suit4x4, 4, 0, priv]
+  - [attack4x4, 2, 4, pub]
+  - [attack4x4, 2, 2, pub]
+  - [attack4x4, 2, 1, pub]
+  - [attack4x4, 2, 0, pub]
+  - [attack4x4, 2, 0, priv]
+cell_checks:
+  "blocker16 2,2,pub": {check: pad}
+  "blocker16 4,4,pub": {check: pad}
+  "attack4x4 2,4,pub": {check: pad}
+  "suit4x4 4,4,pub": {check: suit pad}
+  "suit4x4 4,2,pub": {check: suit pad}
+  "suit4x4 2,2,pub": {check: suit pad}

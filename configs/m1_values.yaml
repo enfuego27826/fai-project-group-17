@@ -1,0 +1,24 @@
+# Milestone 1: exact V(k, inf, rho) on small games (s = infinity, TMECor by column generation).
+experiment: m1_values
+seed: 0
+backend: auto            # gurobi if a licence starts, else highs
+games:
+  - name: card_guessing
+    base_game: card_guessing(num_cards=4)
+    team: [0, 1]          # seating is explicit: it changes the game
+    adversary: 2
+    rounds: [0]           # one round when play leaves chance phase 0 (after the deal)
+  - name: kuhn3
+    base_game: kuhn_poker(players=3)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+k: [0, 1, 2]
+s: [inf]
+rho: [priv, pub]
+simultaneous: true        # teammate 1 does not see m_0 before sending m_1
+solver:
+  enum_limit: 20000       # enumerate one teammate's reduced plans if at most this many, else MILP
+  tol: 1.0e-9
+  pricing_time_limit: 1200  # seconds per exact MILP pricing call; on timeout report [lower, upper]
+check_independent_v0: true  # also compute V_Cor of the base game by solvers.tmecor_enum

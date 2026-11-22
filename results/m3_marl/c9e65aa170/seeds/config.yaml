@@ -1,0 +1,105 @@
+experiment: m3_marl
+seeds:
+- 0
+- 1
+- 2
+- 3
+- 4
+workers: 8
+methods:
+- team_pg_vs_exact_br
+- self_play
+learner:
+  iterations: 10000
+  batch: 256
+  lr: 8.0
+  log_every: 50
+  init_scale: 0.0
+games:
+- name: attack2x2
+  base_game: coordinated_attack(rows=2,cols=2)
+  team:
+  - 0
+  - 1
+  adversary: 2
+  rounds:
+  - 0
+  k:
+  - 0
+  - 1
+  s:
+  - 0
+  - 1
+  - 2
+  rho:
+  - priv
+  - pub
+- name: blocker4
+  base_game: card_blocker(num_cards=4)
+  team:
+  - 0
+  - 1
+  adversary: 2
+  rounds:
+  - 0
+  k:
+  - 0
+  - 1
+  - 2
+  s:
+  - 0
+  - 1
+  - 2
+  rho:
+  - priv
+  - pub
+exact_values:
+  attack2x2:
+    0,0,priv: 0.25
+    0,0,pub: 0.25
+    0,1,priv: 0.375
+    0,1,pub: 0.375
+    0,2,priv: 0.375
+    0,2,pub: 0.375
+    1,0,priv: 0.75
+    1,0,pub: 0.25
+    1,1,priv: 0.75
+    1,1,pub: 0.5
+    1,2,priv: 0.75
+    1,2,pub: 0.75
+  blocker4:
+    0,0,priv: 0.1875
+    0,0,pub: 0.1875
+    0,1,priv: 0.1875
+    0,1,pub: 0.1875
+    0,2,priv: 0.1875
+    0,2,pub: 0.1875
+    1,0,priv: 0.375
+    1,0,pub: 0.25
+    1,1,priv: 0.375
+    1,1,pub: 0.375
+    1,2,priv: 0.375
+    1,2,pub: 0.375
+    2,0,priv: 0.75
+    2,0,pub: 0.25
+    2,1,priv: 0.75
+    2,1,pub: 0.5
+    2,2,priv: 0.75
+    2,2,pub: 0.75
+curve_cells:
+- - attack2x2
+  - 0
+  - 1
+  - pub
+- - attack2x2
+  - 1
+  - 0
+  - pub
+- - blocker4
+  - 1
+  - 0
+  - pub
+- - blocker4
+  - 2
+  - 2
+  - pub

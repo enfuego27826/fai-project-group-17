@@ -1,0 +1,13 @@
+{
+  "commit": "30ff8faaebdf226487240b2cb90ae8f8006c0734",
+  "dirty": true,
+  "python": "3.11.5",
+  "workers": 3,
+  "threads_per_worker": 1,
+  "started": "2026-11-22 12:30:44",
+  "argv": [
+    "scripts/run_m6.py",
+    "--config",
+    "configs/m7_tabinit_long.yaml"
+  ]
+}

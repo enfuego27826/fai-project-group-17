@@ -1,0 +1,78 @@
+experiment: m5_suit
+seeds:
+- 0
+- 1
+- 2
+- 3
+- 4
+- 5
+- 6
+- 7
+- 8
+- 9
+workers: 4
+methods:
+- name: pg_vs_br
+  trainer: pg
+  opponent: best_response
+  iterations: 10000
+  batch: 256
+  lr: 8.0
+  outputs:
+  - last
+  - avg
+games:
+- name: suit2x2
+  base_game: suit_blocker(suits=2,ranks=2)
+  team:
+  - 0
+  - 1
+  adversary: 2
+  rounds:
+  - 0
+  ranks: 2
+  phi: suit_blocker
+  cells:
+  - - 2
+    - 1
+    - pub
+- name: suit2x4
+  base_game: suit_blocker(suits=2,ranks=4)
+  team:
+  - 0
+  - 1
+  adversary: 2
+  rounds:
+  - 0
+  ranks: 4
+  phi: suit_blocker
+  cells:
+  - - 3
+    - 1
+    - pub
+- name: suit4x2
+  base_game: suit_blocker(suits=4,ranks=2)
+  team:
+  - 0
+  - 1
+  adversary: 2
+  rounds:
+  - 0
+  ranks: 2
+  phi: suit_blocker
+  cells:
+  - - 3
+    - 1
+    - pub
+exact_values:
+  suit2x2:
+    2,1,pub: 0.5
+    2,1,priv: 0.5
+  suit2x4:
+    3,1,pub: 0.5
+    3,1,priv: 0.5
+  suit4x2:
+    3,1,pub:
+    - 0.5
+    - 0.75
+    3,1,priv: 0.75

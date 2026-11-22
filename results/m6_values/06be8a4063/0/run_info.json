@@ -1,0 +1,20 @@
+{
+  "commit": "fe25180da1de49c3aff1501b52c7e6fe1ae3e7f7",
+  "dirty": true,
+  "python": "3.11.5",
+  "open_spiel": "2.0.2",
+  "backend": "gurobi",
+  "threads": 2,
+  "started": "2026-11-22 10:49:59",
+  "argv": [
+    "scripts/run_values.py",
+    "--config",
+    "configs/m6_values.yaml",
+    "--games",
+    "blocker16",
+    "--k",
+    "1",
+    "--rho",
+    "pub"
+  ]
+}

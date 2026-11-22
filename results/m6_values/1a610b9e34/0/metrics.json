@@ -1,0 +1,30 @@
+[
+  {
+    "game": "suit4x4",
+    "k": 2,
+    "s": "inf",
+    "rho": "pub",
+    "V": 0.18750000000000006,
+    "converged": true,
+    "V_upper_bound": 0.18750000000000006,
+    "g_of_solution": 0.1875,
+    "exploitability": 5.551115123125783e-17,
+    "V_cor_base": null,
+    "team_infosets": [
+      16,
+      17
+    ],
+    "adversary_infosets": 16,
+    "terminals": 16384,
+    "iterations": 55,
+    "columns": 55,
+    "support_size": 11,
+    "exact_pricing_calls": 1,
+    "pricing": "milp",
+    "backend": "gurobi",
+    "build_seconds": 0.7741331920042285,
+    "solve_seconds": 0.40119212299759965,
+    "master_seconds": 0.10401643696968677,
+    "pricing_seconds": 0.24005768796632765
+  }
+]

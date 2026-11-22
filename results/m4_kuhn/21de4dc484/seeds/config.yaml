@@ -1,0 +1,71 @@
+experiment: m4_kuhn
+seeds:
+- 0
+- 1
+- 2
+- 3
+- 4
+workers: 8
+methods:
+- name: pg_vs_br
+  trainer: pg
+  opponent: best_response
+  lr: 8.0
+  iterations: 10000
+  batch: 256
+  outputs:
+  - last
+  - avg
+- name: self_play
+  trainer: pg
+  opponent: learning
+  lr: 8.0
+  iterations: 10000
+  batch: 256
+  outputs:
+  - last
+  - avg
+- name: psro
+  trainer: psro
+  iterations: 20
+  br_iterations: 1500
+  batch: 256
+  lr: 8.0
+  outputs:
+  - single
+games:
+- name: kuhn3
+  base_game: kuhn_poker(players=3)
+  team:
+  - 0
+  - 1
+  adversary: 2
+  rounds:
+  - 0
+  k:
+  - 0
+  - 1
+  - 2
+  s:
+  - 0
+  - 1
+  - 2
+  rho:
+  - priv
+exact_values:
+  kuhn3:
+    0,0,priv:
+    - -0.0416666671
+    - -0.0416666666666667
+    0,1,priv: -0.0416666666666667
+    0,2,priv: -0.0416666666666667
+    1,0,priv:
+    - -0.0416666666666667
+    - 0.0
+    1,1,priv: 0.0
+    1,2,priv: 0.0
+    2,0,priv:
+    - -0.0416666666666667
+    - 0.0
+    2,1,priv: 0.0
+    2,2,priv: 0.0

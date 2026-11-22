@@ -1,0 +1,27 @@
+# Milestone 6, task 2: exact-gradient diagnostic on the cells where PG vs BR from scratch never
+# reached V. The sampled REINFORCE step is replaced by its expectation (exact gradient of the team
+# payoff against the current exact best response = a subgradient of g). Same step size schedule as
+# Milestone 3 to 5 (lr 8, constant), 10,000 iterations. Initializations: the uniform policy
+# (deterministic, one run) and 10 random ones (logits iid N(0, 1), seeds 0 to 9; scale 1 chosen
+# once, not tuned). Control: sampled REINFORCE (batch 256) from the same 10 random initializations.
+experiment: m6_exactgrad
+seeds: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+workers: 6
+exact_values_from: configs/m3_marl.yaml
+methods:
+  - {name: exact_uniform, trainer: pg, opponent: best_response, exact_gradient: true, init_scale: 0.0, seeds: [0], iterations: 10000, batch: 256, lr: 8.0, outputs: [last, avg]}
+  - {name: exact_random, trainer: pg, opponent: best_response, exact_gradient: true, init_scale: 1.0, iterations: 10000, batch: 256, lr: 8.0, outputs: [last, avg]}
+  - {name: sampled_random, trainer: pg, opponent: best_response, init_scale: 1.0, iterations: 10000, batch: 256, lr: 8.0, outputs: [last, avg]}
+games:
+  - name: blocker4
+    base_game: card_blocker(num_cards=4)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    cells: [[1, 0, pub], [2, 0, pub], [2, 1, pub]]
+  - name: attack2x2
+    base_game: coordinated_attack(rows=2,cols=2)
+    team: [0, 1]
+    adversary: 2
+    rounds: [0]
+    cells: [[1, 1, pub]]

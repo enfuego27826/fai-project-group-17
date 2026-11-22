@@ -1,0 +1,35 @@
+experiment: m7_neural_combo
+seeds:
+- 0
+- 1
+- 2
+workers: 5
+iterations: 10000
+batch: 256
+lr: 0.001
+hidden: 64
+log_every: 250
+methods:
+- name: ppo_entropy
+  opponent: best_response
+  ppo_epochs: 4
+  entropy: 0.05
+- name: ppo_batch1024
+  opponent: best_response
+  ppo_epochs: 4
+  batch: 1024
+- name: ppo_value
+  opponent: best_response
+  ppo_epochs: 4
+  value_baseline: true
+- name: ppo_hidden256
+  opponent: best_response
+  ppo_epochs: 4
+  hidden: 256
+cells:
+- - blocker16
+  - 4
+  - 0
+  - priv
+cell_checks: {}
+_out: results/m7_neural_combo/71903d6052/seeds
